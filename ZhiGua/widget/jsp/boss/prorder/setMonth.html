@@ -1,0 +1,30 @@
+<div class="tobar-z mm ban_move">
+    <div class="tonav">
+    </div>
+</div>
+<div id="set_pr_year_month_box" class="wrapper">
+    <div class="scroller">
+        <div>
+            <div class="input-full v3e5">
+                <input class="o_key" data-key-type="123" type="text" id="_pr_search_year" placeholder="请输入年(2016)" readonly="readonly">
+            </div>
+            <div class="input-full v3e5">
+                <input class="o_key" data-key-type="123" type="text" id="_pr_search_month" placeholder="请输入月(1)" readonly="readonly">
+            </div>
+        </div>
+        <div class="n20x mb10x">
+            <div class="x_win mo-btn w100 mo-l" data-co="main" onclick="set_pr_year_month()">确认</div>
+        </div>
+    </div>
+</div>
+<script>
+set_pr_year_month_box = new IScroll('#set_pr_year_month_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

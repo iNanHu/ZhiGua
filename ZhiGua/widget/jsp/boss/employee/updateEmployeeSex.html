@@ -1,0 +1,23 @@
+<div class="tobar-z mm ban_move">
+    <div class="tonav">
+    </div>
+</div>
+<div id="update_employee_sex_box" class="wrapper b0">
+    <div class="scroller">
+        <ul class="user-li">
+        	<li class="x_win" onclick="update_employee_sex(0)">女</li>
+            <li class="x_win" onclick="update_employee_sex(1)">男</li>
+        </ul>
+    </div>
+</div>
+<script>
+update_employee_sex_box = new IScroll('#update_employee_sex_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

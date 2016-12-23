@@ -1,0 +1,8 @@
+[{
+    "name":"mam",
+    "class":"UZMAM",
+    "methods":["checkUpdate","addEvent","execCommand"],
+    "syncMethods":["syncExecCommand"],
+    "launchClassMethod":"launch"
+}
+]

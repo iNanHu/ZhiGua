@@ -1,0 +1,40 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <em class="win3_switch icon icon-block-m fr pr" data-id=".goods_data"></em>
+    </div>
+</div>
+<div id="wrapper2" class="wrapper">
+    <div class="scroller">
+        <ul class="clients-full-li arrow setting">
+            <li class="o_win" data-load="_employee_photo">
+                <div class="w100 ew">
+                    <span class="w7e">上传头像</span>
+                    <span class="ar">
+                    	<i id="set_employee_photo_img" class="add-clients-img" style="background-image: url(imgs/logo.png);"></i> 
+                        <!-- <i id=set_employee_photo_img" class="add-user-img" style="background-image: url(imgs/logo.png);"></i>-->
+                        <input type="hidden" id="set_employee_photo">
+                    </span>
+                </div>
+            </li>
+        </ul>
+        <ul class="user-li arrow setting">
+            <li class="o_win ew" data-load="_set_name">
+                <span>昵称</span>
+                <em class="co-back ar" id="set_employee_Name"></em>
+            </li>
+            <li class="o_win ew" data-load="_set_phone">
+                <span>手机号</span>
+                <em class="co-back ar" id="set_employee_phone"></em>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    win2_scroll = new IScroll('#wrapper2', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+</script>
+

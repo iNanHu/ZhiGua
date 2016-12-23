@@ -1,0 +1,25 @@
+<div class="tobar ml ban_move">
+    <div class="tonav">
+        <em class="x_win icon icon-left-m" data-win="win3"><span>返回</span></em>
+        <p class="page_title ls">订单筛选</p>
+    </div>
+</div>
+<div id="order_filter_box" class="wrapper b0">
+    <div class="scroller">
+        <ul class="user-li arrow">
+            <li class="x_win"  onclick="set_year_month(1)">全部订单</li>
+            <li class="o_win" data-load="_set_month">按月份</li>
+        </ul>
+    </div>
+</div>
+<script>
+order_filter_box = new IScroll('#order_filter_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

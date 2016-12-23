@@ -1,0 +1,37 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <!--<em class="o_win icon icon-add fr pr ls" data-load="add_clients"></em>-->
+    </div>
+</div>
+<div id="det_message_box" class="wrapper b0">
+    <div class="scroller">
+        <ul class="both message-full n15x n1e-z mb15x-z v2e">
+            <li>
+                <div>
+                    <div>
+                        <h4 class="mb20x"><b id="det_m_message_title"></b><span class="fr sl co-back" id="det_m_message_createTime"></span></h4>
+                        <p id="det_m_message_content"></p>
+                    </div>
+                </div>
+            </li>
+            <!-- 
+            <li>
+                <div class="o_win ew" data-load="setting_message">
+                    <div>
+                        <h4 class="mb20x"><b>系统消息</b><span class="fr sl co-back">08-28</span></h4>
+                        <p>A000001111订单已付款20000元，总欠款30000元，<span class="co-main">查看详情？</span></p>
+                    </div>
+                </div>
+            </li>
+             -->
+        </ul>
+    </div>
+</div>
+<script>
+det_message_box = new IScroll('#det_message_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+</script>

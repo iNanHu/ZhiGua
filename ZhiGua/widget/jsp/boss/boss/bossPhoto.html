@@ -1,0 +1,87 @@
+<div class="tobar-z mm ban_move">
+    <div class="tonav">
+        <!--<em class="x_win mo-back7 icon icon-left-m"><span>返回</span></em>-->
+        <!--<p class="page_title ml">上传图片</p>-->
+    </div>
+</div>
+<div id="photo_box" class="wrapper b0">
+    <div class="scroller">
+        <section class="logo-license">
+            <div class="mt2e ac">
+                <p id="up_user_img"></p>
+                <div class="w100 h1e"></div>
+                <button class="o_photo mo-btn nw2e" data-co="vice" data-photo="up_user_img">上传图片</button>
+            </div>
+        </section>
+    </div>
+</div>
+<div id="up_photo_box" class="htmleaf-container wrapper b0">
+    <div class="tobar back mm ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m fl"><span>返回</span></em>
+            <p class="page_title ml">上传图片</p>
+        </div>
+    </div>
+    <div id="clipArea"></div>
+    <ul class="fobar ban_move" data-co="back">
+        <li class="x_photo">
+            <div class="btn">取消</div>
+        </li>
+        <li class="menu">
+            <i class="icon icon-photo"></i>
+            <input type="button" name="file" class="button" value="选取"/>
+            <input id="toUpFile" type="file" accept="image/*" multiple/>
+        </li>
+        <li id="clipBtn">
+            <div class="btn">完成</div>
+        </li>
+    </ul>
+    <div id="preview"></div>
+</div>
+<script>
+    photo_box = new IScroll('#photo_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+    up_photo_box = new IScroll('#up_photo_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+
+    $(document).on('click', '.o_photo', function () {
+        $(".htmleaf-container").show();
+    });
+
+    $(document).on('touchstart','.x_photo',function () {
+        $(".htmleaf-container").hide();
+    });
+
+    $(document).on('click', '#clipBtn', function () {
+        $(".htmleaf-container").hide();
+    });
+
+    var photoSize = $(document).width()/4+60;
+    var clipArea = new PhotoClip("#clipArea", {
+        size: [photoSize, photoSize],
+        outputSize: [640, 640],
+        file: "#toUpFile",
+        view: "#up_user_img",
+        ok: "#clipBtn",
+        loadStart: function() {
+            console.log("照片读取中");
+        },
+        loadComplete: function() {
+            console.log("照片读取完成");
+        },
+        clipFinish: function(dataURL) {
+        	update_bossInfo_photo(dataURL);
+            //console.log(dataURL);
+        }
+    });
+
+    // clipArea.setImg("img/mm.jpg"); //这里可以设置为默认用微信头像
+</script>

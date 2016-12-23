@@ -1,0 +1,42 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <em class="o_win mo-tonav icon icon-screen fr pr" data-load="_customer_order_filter"></em>
+    </div>
+</div>
+<div id="cust_order_box" class="wrapper b0">
+    <div class="scroller">
+        <div class="mo-search mh15x">
+            <input class="o_key sm" id="m_input_search_customer_order" type="text" placeholder="输入订单号搜索试试？" data-key-type="abc" readonly>
+            <span class="icon icon-search"></span>
+        </div>
+        <ul id="listview_cust_order_list" class="order-list v1e5 mh15x co-info sm">
+        	<!-- 
+            <li class="move_del">
+                <div class="o_win" data-load="_customer_order_details" data-json={"order":"","id":"0"}>
+                    <h5 class="v2e5 co-read">订单号：<span>20160726092504</span></h5>
+                    <p>客户：<span>客户1</span></p>
+                    <p>开单员：<span>张三</span></p>
+                    <p>开单时间：<span>2016-06-06 10:00:30</span></p>
+                </div>
+                <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+            </li>
+            -->
+        </ul>
+        <div class="pullUp sm ac v2e nr0e5 mb0e5 co-back no_more" style="display: none">
+            <!--<i class="icon mm icon-loading dis-inbok"></i><span class="sm nl5x dis-inbok v2e5">上拉加载更多</span>-->
+            <!--<p class="load_more"><i class="icon icon-loading mm"></i><span>加载更多</span></p>-->
+            <!--<p class="no_more"><i class="icon icon-loading mm"></i><span>没有更多</span></p>-->
+        </div>
+    </div>
+</div>
+<script>
+cust_order_box = new IScroll('#cust_order_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

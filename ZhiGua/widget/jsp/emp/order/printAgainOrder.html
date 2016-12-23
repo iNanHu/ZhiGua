@@ -1,0 +1,39 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <p class="page_title ls">结算</p>
+    </div>
+</div>
+<div id="print_box" class="wrapper b0">
+    <div class="scroller">
+        <ul class="clients-full-li arrow setting">
+            <li class="o_win" data-load="_select_print_equipment">
+            	<div class="w100 ew">
+                	<span class="w5e">打印设备:</span>
+                	<em class="co-back ar" id="s_print_equipment_name"></em>
+                	<input type="hidden" id="s_print_equipment_id" value="">
+                </div>
+            </li>
+            <li class="o_win" data-load="_select_print_type">
+            	<div class="w100 ew">
+                	<span class="w5e">打印方式:</span>
+                	<em class="co-back ar" id="s_print_count_name">单打</em>
+                	<input type="hidden" id="s_print_count" value="1">
+                </div>
+            </li>
+        </ul>
+        <div class="n20x mb10x">
+            <div class="x_win mo-btn w100 mo-l" data-co="warn" onclick="printAgain()">打印</div>
+        </div>
+    </div>
+</div>
+<script>
+print_box = new IScroll('#print_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

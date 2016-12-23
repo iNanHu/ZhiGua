@@ -1,0 +1,79 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <p class="page_title ls">结算</p>
+    </div>
+</div>
+<div id="settlement_box" class="wrapper b0">
+    <div class="scroller">
+        <div class="bg-white mh15x v3e nw20x">
+            <div class="w100 ew">
+                <span class="w50">上欠金额：</span>
+                <span class="w50 order-price ar co-error" id="history_arrears">0.0</span>
+            </div>
+            <div class="w100 ew">
+                <span class="al w50">本单总额：</span>
+                <span class="w50 order-price ar co-error" id="order_total_amount">0.0</span>
+            </div>
+            <div class="w100 ew">
+                <span class="w50">应收金额：</span>
+                <span class="w50 order-price ar co-error" id="receivable_pay">0.0</span>
+            </div>
+        </div>
+        <ul class="user-li arrow setting">
+            <li class="o_win ew" data-load="_add_actual_payment">
+                <span>实收金额:</span>
+                <em class="co-back ar" id="actual_pay">0.0</em>
+            </li>
+            <li class="o_win ew" data-load="_add_discount_pay">
+                <span>优惠</span>
+                <em class="co-back ar" id="discount_pay">0.0</em>
+            </li>
+        </ul>
+        <ul class="user-li arrow setting">
+            <li class="o_win ew" data-load="_add_payment_type">
+                <span>支付方式:</span>
+                <em class="co-back ar" id="payment_type_name">现金支付</em>
+                <input type="hidden" id="payment_type" value="0">
+            </li>
+        </ul>
+        <ul class="clients-full-li arrow setting">
+            <li class="o_win" data-load="_add_print_equipment">
+            	<div class="w100 ew">
+                	<span class="w5e">打印设备:</span>
+                	<em class="co-back ar" id="print_equipment_name"></em>
+                	<input type="hidden" id="print_equipment_id" value="1">
+                </div>
+            </li>
+            <li class="o_win" data-load="_add_print_type">
+            	<div class="w100 ew">
+                	<span class="w5e">打印方式:</span>
+                	<em class="co-back ar" id="print_count_name">不打印</em>
+                	<input type="hidden" id="print_count" value="0">
+                </div>
+            </li>
+        </ul>
+        <ul class="clients-full-li setting">
+            <li class="o_win" data-load="_add_bill_remarks">
+                <div class="w100 ew">
+                    <span class="w7e">备注<span class="sm co-warn">(选填)</span></span>
+                    <em class="icon icon-bi-m ar co-back ll nr15x"></em>
+                </div>
+            </li>
+            <li class="co-back" id="bill_remarks"></li>
+        </ul>
+        <div class="n20x mb10x">
+            <div class="x_win mo-btn w100 mo-l" data-co="warn" onclick="payment_order()">完成本单</div>
+        </div>
+    </div>
+</div>
+<script>
+settlement_box = new IScroll('#settlement_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

@@ -1,0 +1,72 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <!--<em class="o_win icon icon-add fr pr ls" data-load="add_clients"></em>-->
+        <!--<em class="o_win icon icon-screen fr pr ls" data-load="goods_screen"></em>-->
+    </div>
+</div>
+<div id="instant_message_box" class="wrapper">
+    <div class="scroller">
+        <ul class="both message-receive nl20x-z nr2e-z mb15x v2e nh20x-z">
+            <li>
+                <div class="ew">
+                    <div><i class="message-receive-img" style="background-image: url(imgs/usericongg.jpg);"></i></div>
+                    <div>
+                        <h6 class="ss co-back v1e">张三二</h6>
+                        <span class="paopao mm v1e5">你好，在吗？</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div><i class="message-receive-img" style="background-image: url(imgs/usericongg.jpg);"></i></div>
+                    <div>
+                        <h6 class="ss co-back v1e">张三二</h6>
+                        <span class="paopao mm v1e5">上次拿的A20124522那款蓝色的裙子可以再给我拿200件吗?</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="both message-send nr20x-z nl2e-z mb15x v2e nh20x-z">
+            <li>
+                <div class="ew">
+                    <div class="ar">
+                        <h6 class="ss co-back v1e">小李</h6>
+                        <span class="paopao mm v1e5">好的，张总。</span>
+                    </div>
+                    <div><i class="message-send-img" style="background-image: url(imgs/usericongg.png);"></i></div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+
+                    <div class="ar">
+                        <h6 class="ss co-back v1e">小李</h6>
+                        <span class="paopao mm v1e5">请问张总您是自己来提货还是给您寄过去呢？</span>
+                    </div>
+                    <div><i class="message-send-img" style="background-image: url(imgs/usericongg.png);"></i></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<ul id="footer" class="fobar message ban_move">
+    <li class="w3e5" data-load="home">
+        <i class="icon icon-add"></i>
+    </li>
+    <li>
+        <input class="message_input" type="text" />
+    </li>
+    <li class="w4e5" data-load='user'>
+        <!--<i class="icon icon-send"></i>-->
+        <!--<button class="mo-btn mo-m" data-co="main">发送</button>-->
+        <p class="ml co-read">发送</p>
+    </li>
+</ul>
+<script>
+    instant_message_box = new IScroll('#instant_message_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+</script>

@@ -1,0 +1,41 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <p class="page_title ls">新增商品</p>
+    </div>
+</div>
+<div id="edit_goods_box" class="wrapper b0">
+    <div class="scroller">
+        <ul class="both goods-list bg-white nw20x-z nh1e-z mt15x">
+            <li class="move_del">
+                <div class="ew ew-mw1e">
+                    <!--商品图，暂时不用，保持结构，方便扩展-->
+                    <!-- <div class="goods-img nr20x" style="background-image:url(imgs/goods1.jpg)"></div> -->
+                    <div>
+                        <h6 class="goods-name mb15x" id="edit_goods_name">没有商品</h6>
+                        <!-- <p class="co-info ss" id="edit_goods_">库存：<span>300件</span></p> -->
+                        <p class="co-info ss">零售价：<span class="goods-price co-warn"  id="edit_goods_price_old">0.00 / 件</span></p>
+                    </div>
+                </div>
+                <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+            </li>
+        </ul>
+        <div class="input-full bk-bottom v3e5">
+            <input class="o_key" data-key-type="123" id="edit_goods_count" type="text" value="" placeholder="请输入商品数量" readonly="readonly"/>
+        </div>
+        <div class="n20x mb10x">
+            <div class="x_win mo-btn w100 mo-l" data-co="main" onclick="update_inventory_goods()">确认</div>
+        </div>
+    </div>
+</div>
+<script>
+    edit_goods_box = new IScroll('#edit_goods_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+
+</script>

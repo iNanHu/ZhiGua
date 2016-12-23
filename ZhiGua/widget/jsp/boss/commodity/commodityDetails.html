@@ -1,0 +1,39 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <em class="o_win mo-tonav icon icon-edit-m fr pr ls" data-load="_edit_commodity"></em>
+    </div>
+</div>
+<div id="det_commodity_box" class="wrapper b0">
+    <div class="scroller">
+        <div class="goods-info">
+            <div class="both bg-white">
+                <div class="goods-info-img mb10x" id="det_commodity_photo" style="background-image:url(imgs/goods2.jpg);"></div>
+                <div class="nw20x v1e5 nb1e5">
+                    <p class="v3e"><em class="co-info mr1e">条形码:</em><span class="ml co-warn" id="det_bar_code"></span></p>
+                    <div class="mh10x mo-line"></div>
+                    <div class="nh0e5-z">
+                        <p><em class="co-info mr1e">商品名称:</em><span id="det_commodity_name"></span></p>
+              			<p><em class="co-info mr1e">供应商:</em><span id="det_supplier_name"></span></p>
+                        <p><em class="co-info mr1e">商品分类:</em><span id="det_commodity_category_name"></span></p>
+                        <p><em class="co-info mr1e">单位:</em><span id="det_unit_name"></span></p>
+                        <p><em class="co-info mr1e">售价:</em><span class="goods-price co-error ml" id="det_commodity_price"></span></p>
+                        <p><em class="co-info mr1e">进价:</em><span class="goods-price co-error ml" id="det_reference_price"></span></p>
+                        <p><em class="co-info mr1e">状态:</em><span id="det_commodit_status"></span></p>
+                        <p><em class="co-info mr1e">备注:</em><span id="det_commodity_remarks"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+det_commodity_box = new IScroll('#det_commodity_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

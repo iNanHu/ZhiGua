@@ -1,0 +1,308 @@
+@charset "utf-8";
+/*主体*/
+/*辅助*/
+/*阅读(默认)*/
+/*辅助阅读*/
+/*信息*/
+/*成功*/
+/*提醒/警告*/
+/*错误/强调*/
+/*黑色*/
+/*白色*/
+.mo-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  overflow: hidden;
+  clear: both;
+  border-top: 1px solid #ddd;
+}
+.bk-top{border-top:1px solid #dfdfdf;}
+.bk-bottom{border-bottom:1px solid #dfdfdf}
+/*button*/
+.mo-btn-confirm,
+.mo-btn-cancel,
+.mo-btn-reset {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border-radius: 5px;
+  min-width: 1em;
+  height: 3em;
+  padding: 0 1em;
+  cursor: pointer;
+}
+/*按钮*/
+.mo-btn {display: inline-block;min-width: 3em;height: 3em;line-height: 2.9em;position: relative;border: 1px solid rgba(0, 0, 0, 0.15);border-radius: 4px;cursor: pointer;text-align: center;}
+button.mo-btn,
+input.mo-btn {line-height: 0;}
+.mo-btn {background: #f6f8f8;}
+.mo-btn:hover {  background: #fbfbfb;}
+.mo-btn:active {background: #f0f0f0;}
+.mo-btn[data-co="main"] {background: #1cbbff;border: 1px solid rgba(0, 0, 0, 0);}
+.mo-btn[data-co="vice"] {background: #ffba46;border: 1px solid rgba(0, 0, 0, 0);}
+.mo-btn[data-co="info"] {background: #1cbbff;border: 1px solid rgba(0, 0, 0, 0);}
+.mo-btn[data-co="success"] {background: #93e354;border: 1px solid rgba(0, 0, 0, 0);}
+.mo-btn[data-co="warn"] {background: #ff9900;border: 1px solid rgba(0, 0, 0, 0);}
+.mo-btn[data-co="error"] {background: #ff5049;border: 1px solid rgba(0, 0, 0, 0);}
+.mo-btn[data-co="white"] {background: #fff;color:#666;border:1px solid #ccc;}
+.mo-btn:disabled,.mo-btn:disabled:hover,.mo-btn:disabled:active{background:#ccc;color:#fff;cursor:not-allowed}
+.mo-btn[data-co="read"],
+.mo-btn[data-co="main"],
+.mo-btn[data-co="vice"],
+.mo-btn[data-co="info"],
+.mo-btn[data-co="success"],
+.mo-btn[data-co="warn"],
+.mo-btn[data-co="error"] {
+  color: #ffffff;
+}
+/*input*/
+/*输入*/
+.mo-input {
+  display: inline-block;
+  min-width: 3em;
+  height: 3em;
+  line-height: 1.3em;
+  margin-bottom: 3px;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 0.7em 1em;
+  position: relative;
+}
+/*输入*/
+.mo-input-group {
+  display: inline-block;
+  min-width: 2.5em;
+  height: 2.5em;
+  line-height: 2.4em;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+}
+.mo-input-group .mo-input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: none;
+  left: 0;
+  top: 0;
+  padding: 0.8em 1em 0.8em 3em;
+}
+.mo-input-group > .icon {
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.4em;
+  vertical-align: text-bottom;
+  text-align: center;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+.mo-input {
+  border-color: #aaa;
+}
+.mo-input:hover {
+  border-color: #bbb;
+}
+.mo-input:focus {
+  border-color: #c0c0c0;
+}
+.mo-input[data-co="read"] {
+  border-color: #aaa;
+}.mo-input[data-co="read"]:hover {
+  border-color: #cfcfcf;
+}
+.mo-input[data-co="read"]:focus {
+  border-color: #c0c0c0;
+}
+.mo-input[data-co="main"]:hover {
+  border-color: #1cbaff;
+}
+.mo-input[data-co="main"]:focus {
+  border-color: #1199ff;
+}
+.mo-input[data-co="vice"]:hover {
+  border-color: #ffb822;
+}
+.mo-input[data-co="vice"]:focus {
+  border-color: #ff9715;
+}
+.mo-input[data-co="info"]:hover {
+  border-color: #1cbaff;
+}
+.mo-input[data-co="info"]:focus {
+  border-color: #1199ff;
+}
+.mo-input[data-co="success"]:hover {
+  border-color: #a4e632;
+}
+.mo-input[data-co="success"]:focus {
+  border-color: #84c91f;
+}
+.mo-input[data-co="warn"]:hover {
+  border-color: #ffb822;
+}
+.mo-input[data-co="warn"]:focus {
+  border-color: #ff9715;
+}
+.mo-input[data-co="error"]:hover {
+  border-color: #ff887e;
+}
+.mo-input[data-co="error"]:focus {
+  border-color: #ff685e;
+}
+
+
+/*UI0007---mo-tabs (css+js)---STA*/
+.mo-tabs {
+  display: inline-table;
+  table-layout: fixed;
+  list-style: none;
+  position: relative;
+  height: 2.5em;
+  line-height: 2.4em;
+}
+.mo-tabs > * {
+  display: table-cell;
+  width: 1%;
+  height: 100%;
+  vertical-align: middle;
+  background: #fff;
+  border: 1px solid #dadfe0;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  -webkit-transition: background 0.2s;
+}
+.mo-tabs > *.active + *,
+.mo-tabs > *:hover + *,
+.mo-tabs > *:active + * {
+  border-left-color: transparent;
+}
+.mo-tabs > *:not(:last-child) {
+  border-right-color: transparent;
+}
+.mo-tabs > *:last-child {
+  border-radius: 0 4px 4px 0;
+}
+.mo-tabs > *:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.mo-tabs > *.active {
+  background: #f6f8f8;
+}
+.mo-tabs > *.active {
+  border-color: #dadfe0;
+}
+.mo-tabs > *.active {
+  color: #454545;
+}
+.mo-tabs > *:hover {
+  background: #fbfbfb;
+}
+.mo-tabs > *:hover {
+  border-color: #cfcfcf;
+}
+.mo-tabs > *:hover {
+  color: #888888;
+}
+.mo-tabs > *:active {
+  background: #f0f0f0;
+}
+.mo-tabs > *:active {
+  border-color: #c0c0c0;
+}
+.mo-tabs > *:active {
+  color: #444444;
+}
+.mo-tabs[data-co="read"] > *.active {
+  background: #f6f8f8;
+}
+.mo-tabs[data-co="read"] > *.active {
+  border-color: #dadfe0;
+}
+.mo-tabs[data-co="read"] > *.active {
+  color: #454545;
+}
+.mo-tabs[data-co="main"] > *.active {
+  background: #1cbbff;
+}
+.mo-tabs[data-co="main"] > *.active {
+  border-color: #16aaff;
+}
+.mo-tabs[data-co="main"] > *.active {
+  color: #ffffff;
+}
+.mo-tabs[data-co="vice"] > *.active {
+  background: #ffba46;
+}
+.mo-tabs[data-co="vice"] > *.active {
+  border-color: #ffa939;
+}
+.mo-tabs[data-co="vice"] > *.active {
+  color: #ffffff;
+}
+.mo-tabs[data-co="info"] > *.active {
+  background: #1cbbff;
+}
+.mo-tabs[data-co="info"] > *.active {
+  border-color: #16aaff;
+}
+.mo-tabs[data-co="info"] > *.active {
+  color: #ffffff;
+}
+.mo-tabs[data-co="info"] > *:hover {
+  background: #23cbff;
+}
+.mo-tabs[data-co="info"] > *:hover {
+  border-color: #1cbaff;
+}
+.mo-tabs[data-co="info"] > *:hover {
+  color: #ffffff;
+}
+.mo-tabs[data-co="info"] > *:active {
+  background: #16aaff;
+}
+.mo-tabs[data-co="info"] > *:active {
+  border-color: #1199ff;
+}
+.mo-tabs[data-co="info"] > *:active {
+  color: #ffffff;
+}
+.mo-tabs[data-co="success"] > *.active {
+  background: #93e354;
+}
+.mo-tabs[data-co="success"] > *.active {
+  border-color: #95d828;
+}
+.mo-tabs[data-co="success"] > *.active {
+  color: #ffffff;
+}
+.mo-tabs[data-co="warn"] > *.active {
+  background: #ffba46;
+}
+.mo-tabs[data-co="warn"] > *.active {
+  border-color: #ffa939;
+}
+.mo-tabs[data-co="warn"] > *.active {
+  color: #ffffff;
+}
+.mo-tabs[data-co="error"] > *.active {
+  background: #ff5049;
+}
+.mo-tabs[data-co="error"] > *.active {
+  border-color: #ff796f;
+}
+.mo-tabs[data-co="error"] > *.active {
+  color: #ffffff;
+}
+.mo-tabs-box > * {
+  display: none;
+}
+.mo-tabs-box > *.active {
+  display: block;
+}
+/*UI0007---mo-tabs (css+js)---END*/

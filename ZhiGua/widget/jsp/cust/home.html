@@ -1,0 +1,62 @@
+<div id="home_box" class="wrapper hide-bar" style="top:0">
+    <div class="scroller fullbg fullbg-vice">
+        <div class="tobar tm ml">
+            <div class="tonav">
+                <em class="goods-switch icon icon-block-m ml" data-win="win1" data-target=".home_goods"></em>
+                <p class="win_open page_map ms" data-win="win2" data-url="map">
+                	<span class="map-box dis-inbok w100 v2e nw15x"><i class="icon icon-map"></i> <span class="ms al">进货额统计图</span></span>
+                </p>
+                <i class="mo-tonav icon icon-refresh fr pr ls" onclick="home()"></i>
+            </div>
+        </div>
+        <div class="home-header">
+            <div class="home-bg">
+                <div id="custTransactionAmount_echarts" style="height: 85%;width: 100%"></div>
+            </div>
+            <ul class="user-info ew w100 ac">
+                <li class="o_win" data-load="_cust_trade_echarts" onclick="set_custTransactionAmountTotal_('D')">
+                    <h5 id="custTransactionAmountTotal_D">0</h5>
+                    <p>日进货额</p>
+                </li>
+                <li class="o_win" data-load="_cust_trade_echarts" onclick="set_custTransactionAmountTotal_('M')">
+                    <h5 id="custTransactionAmountTotal_M">0</h5>
+                    <p>月进货额</p>
+                </li>
+                <li class="o_win" data-load="_cust_trade_echarts" onclick="set_custTransactionAmountTotal_('Y')">
+                    <h5 id="custTransactionAmountTotal_Y">0</h5>
+                    <p>年进货额</p>
+                </li>
+            </ul>
+        </div>
+        <table class="mo-grid bg-white mh15x sl">
+            <tr>
+                <td class="o_win" data-load="_order" onclick="set_order_type(0)">
+                    <div class="to_balance">
+                        <p><i class="co6 icon icon-news-on ll"></i></p>
+                        <p>订单管理</p>
+                    </div>
+                </td>
+                <td class="o_win" data-load="_cust_arrears_echarts">
+                    <div class="to_transfer">
+                        <p><i class="co5 icon icon-order-on ll"></i></p>
+                        <p>未支出统计</p>
+                    </div>
+                </td>
+                <td class="o_win" data-load="_purchase_notes">
+                    <div class="to_pay">
+                        <p><i class="co3 icon icon-info-on ll"></i></p>
+                        <p>进货笔记</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+    home_box = new IScroll('#home_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+</script>

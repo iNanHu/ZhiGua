@@ -1,0 +1,93 @@
+<div class="tobar ml ban_move">
+    <div class="tonav">
+        <!--<em class="x_win3 icon icon-left-m"><span>返回</span></em>-->
+        <p class="page_title ls">消息</p>
+        <!--
+        <em class="o_win mo-tonav icon icon-usergroup-m fr pr ls" data-load="_customer"></em>
+        -->
+    </div>
+</div>
+<div id="message_box" class="wrapper">
+    <div class="scroller">
+        <div class="mo-search mh15x">
+            <input class="sm" id="m_input_search_message" type="text" placeholder="搜索消息" oninput="m_search_message()">
+            <span class="icon icon-search co-back sm row1 v1e5"></span>
+        </div>
+        <ul id="listview_message_manage" class="both message-list bg-white nw20x-z mb15x v2e nh20x-z">
+        	<!-- 
+            <li class="move_del">
+                <div class="o_win ew" data-load="_message_details">
+                    <div><i class="message-list-icon icon icon-notice-m bg2"></i><b class="mo-badge basketCount" style="padding: 0.6em 0.6em"></b></div>
+                    <div>
+                        <h4 class="mm">系统消息<span class="fr ss co-back">08-28</span></h4>
+                        <p class="co-back sm row1 v1e5">张三五给您打款20,000元，查看详情？</p>
+                    </div>
+                </div>
+                <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+            </li>
+            <li class="move_del">
+                <div class="o_win ew" data-load="_message_details">
+                    <div><i class="message-list-icon icon icon-accountsvg-on bg3"></i><b class="mo-badge basketCount" style="padding: 0.6em 0.6em"></b></div>
+                    <div>
+                        <h4 class="mm">客户消息<span class="fr ss co-back">08-28</span></h4>
+                        <p class="co-back sm row1 v1e5">张三五给您打款20,000元，查看详情？</p>
+                    </div>
+                </div>
+                <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+            </li>            
+            <li class="move_del">
+                <div class="o_win ew" data-load="_message_details">
+                    <div><i class="message-list-icon icon icon-goods bg1"></i><b class="mo-badge basketCount" style="padding: 0.6em 0.6em"></b></div>
+                    <div>
+                        <h4 class="mm">库存消息<span class="fr ss co-back">08-28</span></h4>
+                        <p class="co-back sm row1 v1e5">张三五给您打款20,000元，查看详情？</p>
+                    </div>
+                </div>
+                <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+            </li>                        
+            <li class="move_del">
+                <div class="o_win ew" data-load="_message_details">
+                    <div><i class="message-list-icon icon icon-goods bg5"></i><b class="mo-badge basketCount" style="padding: 0.6em 0.6em"></b></div>
+                    <div>
+                        <h4 class="mm">商品消息<span class="fr ss co-back">08-28</span></h4>
+                        <p class="co-back sm row1 v1e5">张三五给您打款20,000元，查看详情？</p>
+                    </div>
+                </div>
+                <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+            </li>
+            <li class="move_del">
+                <div class="o_win ew" data-load="_message_details">
+                    <div><i class="message-list-icon icon icon-goods bg4"></i><b class="mo-badge basketCount" style="padding: 0.6em 0.6em"></b></div>
+                    <div>
+                        <h4 class="mm">产品消息<span class="fr ss co-back">08-28</span></h4>
+                        <p class="co-back sm row1 v1e5">张三五给您打款20,000元，查看详情？</p>
+                    </div>
+                </div>
+                <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+            </li>
+             -->                           
+        </ul>
+        <!-- 
+        <ul class="both message-list bg-white nw20x-z mb15x v2e nh20x-z">
+            <li id="MD-A" class="move_del">
+                <div class="o_win ew" data-load="_chat_message" data-title="张三三">
+                    <div><i class="message-list-img" style="background-image: url(imgs/usericongg.jpg);"></i></div>
+                    <div>
+                        <h4 class="mm"><span>张三三</span><span class="fr ss co-back">08-28</span></h4>
+                        <p class="co-back sm row1 v1e5">上次那种款式再给我拿200件</p>
+                    </div>
+                </div>
+                <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+            </li>
+        </ul>
+         -->
+    </div>
+</div>
+<script>
+    message_box = new IScroll('#message_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+</script>

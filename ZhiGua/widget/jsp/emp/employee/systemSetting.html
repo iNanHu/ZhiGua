@@ -1,0 +1,42 @@
+<div class="tobar-z mm ban_move">
+    <div class="tonav">
+        <!--<i class="icon icon-map fr pr"></i>-->
+    </div>
+</div>
+<div id="wrapper2" class="wrapper b0">
+    <div class="scroller">
+        <div class="n20x bg-white">
+            <h5 class="v3e ac">设置字号</h5>
+            <ul class="setting_sz w15e mo-tabs mo-tabs-ed" data-co="vice">
+                <li data-sz="s">小</li>
+                <li data-sz="m">中</li>
+                <li data-sz="l">大</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    win2_scroll = new IScroll('#wrapper2', {
+        probeType: 3,
+//        scrollbars: true,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+    var fontSize = Storage.get('fontSize') || 'm';
+    if (fontSize == 's') {
+        $('.setting_sz li').eq(0).addClass('active');
+    } else if (fontSize == 'm') {
+        $('.setting_sz li').eq(1).addClass('active');
+    } else if (fontSize == 'l') {
+        $('.setting_sz li').eq(2).addClass('active');
+    }
+    $(document).on('click', '.setting_sz li', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $('html').attr('data-sz', $(this).data('sz'));
+        localStorage.setItem('fontSize', $(this).data('sz'));
+    });
+</script>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="GvW-MV-6Gw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hQK-gl-f8q">
+            <objects>
+                <navigationController id="GvW-MV-6Gw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WNa-m2-pW3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rQU-Hc-3pG" kind="relationship" relationship="rootViewController" id="w87-Xt-Qah"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTm-n9-GI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1151" y="307"/>
+        </scene>
+        <!--ManagerVC-->
+        <scene sceneID="RGu-9c-QEq">
+            <objects>
+                <viewController storyboardIdentifier="ZGManagerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rQU-Hc-3pG" customClass="ZGManagerVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eGN-Ek-amr"/>
+                        <viewControllerLayoutGuide type="bottom" id="twa-Kb-MhU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BiQ-vL-7AR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BoH-cL-cqy"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="push" id="ZZF-Cm-eSw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2X7-Jz-cvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-655.5" y="300.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lOO-eo-mqU"/>
+                        <viewControllerLayoutGuide type="bottom" id="LTy-sQ-CQU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pr5-7R-VGY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pr5-7R-VGY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2jr-qm-NT2"/>
+                            <constraint firstItem="pr5-7R-VGY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="3uG-b1-5sW"/>
+                            <constraint firstItem="pr5-7R-VGY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ic4-HU-XyA"/>
+                            <constraint firstItem="pr5-7R-VGY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="hKK-0x-552"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="efE-Ir-awu"/>
+                    <connections>
+                        <outlet property="webView" destination="pr5-7R-VGY" id="rUp-Pv-c2L"/>
+                        <segue destination="IUG-gc-K67" kind="push" identifier="NavToBluePrintVC" id="5ja-bf-KZM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-152" y="301"/>
+        </scene>
+        <!--Blue Print MainVC-->
+        <scene sceneID="ffd-KL-gVh">
+            <objects>
+                <viewController storyboardIdentifier="BluePrintMainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IUG-gc-K67" customClass="BluePrintMainVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TbH-iT-OgM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jxj-Vy-H0A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="90G-bx-j8w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="WC2-Ec-mb9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WC2-Ec-mb9" firstAttribute="height" secondItem="90G-bx-j8w" secondAttribute="height" id="JHk-ZQ-Kbl"/>
+                            <constraint firstItem="WC2-Ec-mb9" firstAttribute="width" secondItem="90G-bx-j8w" secondAttribute="width" id="e13-1g-5Cm"/>
+                            <constraint firstItem="WC2-Ec-mb9" firstAttribute="centerY" secondItem="90G-bx-j8w" secondAttribute="centerY" id="mAZ-EG-hsW"/>
+                            <constraint firstItem="WC2-Ec-mb9" firstAttribute="centerX" secondItem="90G-bx-j8w" secondAttribute="centerX" id="yQO-hg-Dgi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cR1-cU-78A"/>
+                    <connections>
+                        <outlet property="tableView" destination="WC2-Ec-mb9" id="3az-oV-mt8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ec-g3-tkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351.5" y="300.5"/>
+        </scene>
+        <!--Data Transparent View Controller-->
+        <scene sceneID="twv-M8-hXr">
+            <objects>
+                <viewController storyboardIdentifier="DataTransparentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rD0-Bl-6XF" customClass="DataTransparentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gSx-Fc-LGf"/>
+                        <viewControllerLayoutGuide type="bottom" id="xCs-fr-a81"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FH8-q6-B5q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rpj-b6-kLQ">
+                                <rect key="frame" x="28" y="56" width="319" height="308"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="308" id="OrA-AF-wkK"/>
+                                </constraints>
+                                <string key="text">我的订单                                                                     客户：高姐               开单员：冯慧华                                          开单时间：2016-07-23 10：14：34                           总金额：470.0                                                              订单总额：35.0                                                          优惠金额：0.0     ------------------------------------------                商品名称    单价    数量    合计                                    111       120.0      1     120.0                                        222     130.0      2     260.0                                          金龙达1222 140.0       1     140.0                     ------------------------------------------              实收：490.0</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLg-oj-8Zl">
+                                <rect key="frame" x="63" y="443" width="250" height="40"/>
+                                <color key="backgroundColor" red="0.10588235294117647" green="0.75294117647058822" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="INF-Zu-J1j"/>
+                                    <constraint firstAttribute="width" constant="250" id="rRo-uL-xcY"/>
+                                </constraints>
+                                <state key="normal" title="打印">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rpj-b6-kLQ" firstAttribute="top" secondItem="gSx-Fc-LGf" secondAttribute="bottom" constant="36" id="Mhd-cd-3Uj"/>
+                            <constraint firstItem="iLg-oj-8Zl" firstAttribute="centerX" secondItem="FH8-q6-B5q" secondAttribute="centerX" id="RIp-pP-Djk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rpj-b6-kLQ" secondAttribute="trailing" constant="12" id="Zwb-rS-ldI"/>
+                            <constraint firstItem="rpj-b6-kLQ" firstAttribute="leading" secondItem="FH8-q6-B5q" secondAttribute="leadingMargin" constant="12" id="bTr-Jz-ObB"/>
+                            <constraint firstItem="iLg-oj-8Zl" firstAttribute="top" secondItem="rpj-b6-kLQ" secondAttribute="bottom" constant="79" id="xNd-vS-16d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QFJ-pZ-d7U"/>
+                    <connections>
+                        <outlet property="printBtn" destination="iLg-oj-8Zl" id="NkP-yK-kaT"/>
+                        <outlet property="printTextView" destination="rpj-b6-kLQ" id="JPl-bj-xGm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vkf-dM-vLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.5" y="300.5"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

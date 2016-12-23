@@ -1,0 +1,17 @@
+﻿@charset "utf-8";
+/*--- 基础样式 ----------------------------------------*/
+/*!*默认重置*!*/
+*,:after,:before{border:0;-webkit-box-sizing:border-box;-webkit-font-smoothing: antialiased;box-sizing:border-box;-webkit-tap-highlight-color:rgba(255,255,255,0)}
+html, body {height: 100%;}
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, button {margin: 0;}
+input, ol, ul {margin: 0;padding: 0;}
+body {font-family:Muli,'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif}
+button,input,select,textarea{outline:none;}
+input, button { -webkit-appearance: none;}
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0 1000px white inset;}
+input, button, textarea, select, optgroup, option, label, fieldset, legend {font-family: inherit; font-style: inherit;  font-weight: inherit;font-size:1em; color: inherit;}
+h1, h2, h3, h4, h5, h6, strong {font-style: normal;font-weight: normal;}
+table {border-collapse: collapse; border-spacing: 0}
+address, cite, dfn, em, var {font-style: normal}
+a{text-decoration: none; color:inherit}
+ul, ol {list-style: none}

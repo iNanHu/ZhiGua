@@ -1,0 +1,24 @@
+<div class="tobar-z mm ban_move">
+    <div class="tonav">
+    </div>
+</div>
+<div id="set_name_box" class="wrapper b0">
+    <div class="scroller">
+        <ul class="user-li">
+            <li class="x_win" onclick="select_print_count(1)">单打</li>
+            <li class="x_win" onclick="select_print_count(2)">双打</li>
+            <li class="x_win" onclick="select_print_count(3)">三打</li>
+        </ul>
+    </div>
+</div>
+<script>
+    set_name_box = new IScroll('#set_name_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

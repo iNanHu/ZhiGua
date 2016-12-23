@@ -1,0 +1,43 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <em class="o_win mo-tonav icon icon-add-m fr pr ls" data-load="_add_inventory"></em>
+    </div>
+</div>
+<div id="inventory_box" class="wrapper b0" onclick="close_key()">
+    <div class="scroller">
+        <div class="mo-search mh15x">
+            <input id="m_input_search_inventory" type="text" placeholder="输入盘点编号搜索试试？" oninput="m_search_inventory()">
+            <span class="icon icon-search"></span>
+        </div>
+        <ul id="listview_inventory_list" class="order-list v1e5 mh15x co-info sm">
+        	<!-- 
+            <li class="move_del">
+                <div class="o_win" data-load="_inventory_details">
+                    <h5 class="v2e5 co-read">盘点编号：<span>20160726092504</span></h5>
+                    <p>盘点门店：<span>枫红叶</span></p>
+                    <p>盘盈盘亏：<span>盘盈</span></p>
+                    <p>盘盈金额：<span>120</span></p>
+                    <p>盘点时间：<span>2016-06-06 10:00:30</span></p>
+                </div>
+                <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+            </li>
+             -->
+        </ul>
+        <div class="pullUp sm ac v2e nr0e5 mb0e5 co-back no_more" style="display: none">
+            <!--<i class="icon mm icon-loading dis-inbok"></i><span class="sm nl5x dis-inbok v2e5">上拉加载更多</span>-->
+            <!--<p class="load_more"><i class="icon icon-loading mm"></i><span>加载更多</span></p>-->
+            <!--<p class="no_more"><i class="icon icon-loading mm"></i><span>没有更多</span></p>-->
+        </div>
+    </div>
+</div>
+<script>
+inventory_box = new IScroll('#inventory_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

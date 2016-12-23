@@ -1,0 +1,42 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <em class="o_win mo-tonav icon icon-screen fr pr" data-load="_pr_order_filter"></em>
+    </div>
+</div>
+<div id="pr_order_box" class="wrapper b0" onclick="close_key()">
+    <div class="scroller">
+        <div class="mo-search mh15x">
+            <input class="o_key sm" id="m_input_search_pr_order" type="text" placeholder="输入供应单号搜索试试？" data-key-type="abc" readonly>
+            <span class="icon icon-search"></span>
+        </div>
+        <ul id="listview_pr_order_list" class="order-list v1e5 mh15x co-info sm">
+        	<!-- 
+            <li class="move_del">
+                <div class="o_win" data-load="_pr_order_details">
+                    <h5 class="v2e5 co-read">供应单号：<span>20160726092504</span></h5>
+                    <p>入库门店：<span>枫红叶</span></p>
+                    <p>进货金额：<span>1000</span></p>
+                    <p>开单时间：<span>2016-06-06 10:00:30</span></p>
+                </div>
+                <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+            </li>
+            -->
+        </ul>
+        <div class="pullUp sm ac v2e nr0e5 mb0e5 co-back no_more" style="display: none">
+            <!--<i class="icon mm icon-loading dis-inbok"></i><span class="sm nl5x dis-inbok v2e5">上拉加载更多</span>-->
+            <!--<p class="load_more"><i class="icon icon-loading mm"></i><span>加载更多</span></p>-->
+            <!--<p class="no_more"><i class="icon icon-loading mm"></i><span>没有更多</span></p>-->
+        </div>
+    </div>
+</div>
+<script>
+pr_order_box = new IScroll('#pr_order_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

@@ -1,0 +1,84 @@
+<div class="tobar-z mm">
+    <div class="tonav">
+    </div>
+</div>
+<div id="merchant_details_box" class="wrapper b0">
+    <div class="scroller fullbg fullbg-white">
+        <div class="clients-header">
+            <div class=clients-bg></div>
+            <div class="clients-img" id="det_merchant_img" style="background-image: url(imgs/logo.png)"></div>
+            <p class="clients-name ac ls" id="det_merchant_name">智瓜科技</p>
+            <p class="clients-shop ac lm"><span><i class="icon icon-phone s1e5"></i><span id="det_merchant_phone"></span></span></p>
+        </div>
+        <ul class="clients-full-li setting">
+            <li>
+                <div class="w100 ew">
+                    <span class="co-info w5e">交易订单:</span>
+                    <em class="al co-warn" id="det_merchant_order_count">0笔</em>
+                    <span class="ar"><div class="o_win mo-btn mo-s" data-co="vice" data-load="_order" onclick="set_merchant_account(1)">历史交易订单</div></span>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w5e">地址:</span>
+                    <em class="al" id="det_merchant_address"></em>
+                </div>
+            </li>            
+            <li>
+                <div class="ew">
+                    <span class="co-info w5e">商户简介:</span>
+                    <em class="al" id="det_merchant_introduce"></em>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w7e">交易总金额:</span>
+                    <em class="al" id="det_merchant_sales">0</em>
+                </div>
+            </li>
+             <li>
+                <div class="ew">
+                    <span class="co-info w7e">支出总金额:</span>
+                    <em class="al" id="det_merchant_actualPayment">0</em>
+                </div>
+            </li>           
+            <li>
+                <div class="ew">
+                    <span class="co-info w5e">总优惠额:</span>
+                    <em class="al" id="det_merchant_discountPay">0</em>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w7e">未支出总金额:</span>
+                    <em class="al" id="det_merchant_currdebts">0</em>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w7e">最近交易日期:</span>
+                    <em class="al" id="det_merchant_paymentTime"></em>
+                </div>
+            </li>
+        </ul>
+        <ul id="listview_bankAccount" class="clients-full-li setting">
+        	<!-- 
+            <li>
+                <div class="ew">
+                    <span class="co-info w7e">汇款账户1 :</span>
+                    <em class="al">冯智华（招商银行）：622612345678900987</em>
+                </div>
+            </li>
+            -->
+        </ul>
+    </div>
+</div>
+<script>
+merchant_details_box = new IScroll('#merchant_details_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+</script>
+

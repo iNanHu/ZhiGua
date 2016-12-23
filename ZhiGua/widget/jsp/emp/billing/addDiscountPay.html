@@ -1,0 +1,27 @@
+<div class="tobar-z mm ban_move">
+    <div class="tonav">
+    </div>
+</div>
+<div id="add_discount_pay_box" class="wrapper">
+    <div class="scroller">
+        <div>
+            <div class="input-full v3e5">
+                <input class="o_key" data-key-type="123" type="text" id="m_add_discount_pay" placeholder="请输入优惠金额" readonly="readonly">
+            </div>
+        </div>
+    	<div class="n20x mb10x">
+        	<div class="x_win mo-btn w100 mo-l" data-co="main" onclick="add_discount_pay()">确认</div>
+    	</div>          
+    </div>
+</div>
+<script>
+add_discount_pay_box = new IScroll('#add_discount_pay_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

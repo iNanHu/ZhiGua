@@ -1,0 +1,53 @@
+<div class="tobar ml ban_move">
+    <div class="tonav">
+        <em class="x_win mo-back icon icon-left-m" data-win="win3"><span>返回</span></em>
+        <p class="page_title ls">盘点详情</p>
+    </div>
+</div>
+<div id="inventory_detail_box" class="wrapper b0">
+    <div class="scroller">
+        <div class="order-list mh15x">
+            <div class="w100  h3e5 v3e5 nw20x ew">
+                <h5 class="bold">盘点编号：<span class="co-warn" id="det_inventory_code"></span></h5>
+            </div>
+            <div class="mo-line"></div>
+            <div class="w100  h3e v3e nw20x ew">
+                <p>门店：<span class="co-success" id="det_inventory_shopName"></span></p>
+            </div>
+            <ul id="det_inventory_goods_list" class="goods-list list-bg nw20x nh15x-z">
+            	<!-- 
+                <li>
+                    <h6>商品名称A</h6>
+                    <div class="nr1e-z co-back sm"><span>单价:￥12.00</span><span>数量:x2</span><span>金额:￥18.00</span></div>
+                </li>
+                 -->
+            </ul>
+            <div class="ar v3e nw20x">
+                <span>盘盈<span id="det_inventory_pgoodsCount">0</span>/</span>
+                <span>盘亏<span id="det_inventory_rgoodsCount">0</span>件商品</span>
+                <p class="ls">盘点总金额：<span class="co-error ll" id="det_inventory_totalAmount">￥0.00</span></p>
+                <p class="ls">盘盈盘亏：<span class="co-error ll" id="det_inventory_status"></span></p>
+            </div>
+        </div>
+        <ul class="clients-full-li setting">
+            <li>盘点时间：<span id="det_inventory_createTime"></span></li>
+            <li>
+                <div class="ew">
+                    <span class="w5e" >备注:</span>
+                    <em class="al" id="det_inventory_remarks"></em>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+inventory_detail_box = new IScroll('#inventory_detail_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

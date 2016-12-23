@@ -1,0 +1,27 @@
+<div class="tobar-z mm ban_move">
+    <div class="tonav">
+    </div>
+</div>
+<div id="det_extra_customer_debts_box" class="wrapper">
+    <div class="scroller">
+        <div>
+            <div class="input-full v3e5">
+                <input class="o_key" data-key-type="123"  type="text" id="m_det_extra_customer_debts" value="" placeholder="请输入补账欠款金额" readonly="readonly">
+            </div>
+        </div>
+    	<div class="n20x mb10x">
+        	<div class="x_win mo-btn w100 mo-l" data-co="main" onclick="save_det_extra_customer_debts()">提交</div>
+    	</div>          
+    </div>
+</div>
+<script>
+det_extra_customer_debts_box = new IScroll('#det_extra_customer_debts_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

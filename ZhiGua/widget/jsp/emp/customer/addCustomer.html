@@ -1,0 +1,91 @@
+<div class="tobar-z ml ban_move">
+</div>
+<div id="add_customer_box" class="wrapper b0">
+    <div class="scroller">
+        <ul class="clients-full-li arrow setting">
+            <li class="o_win" data-load="_add_customer_photo">
+                <div class="w100 ew"> 
+                    <span class="w7e">客户头像<span class="sm co-warn">(选填)</span></span>
+                    <span class="ar">
+                        <i id="add_customer_photo_img" class="add-clients-img" style="background-image: url(imgs/logo.png);"></i>
+                        <input type="hidden" id="add_customer_photo">
+                    </span>
+                </div>
+            </li>
+        </ul>
+        <ul class="clients-full-li arrow setting">
+            <li class="o_win" data-load="_add_customer_name">
+                <div class="w100 ew">
+                    <span class="w7e">客户名称</span>
+                    <em class="nl1e ar co-back" id="add_customer_name"></em>
+                </div>
+            </li>
+            <li class="o_win" data-load="_add_memberLevel_name">
+                <div class="w100 ew">
+                    <span class="w7e">客户类型</span>
+                    <em class="nl1e ar co-back" id="add_memberLevel_name"></em>
+                    <input type="hidden" id="add_memberLevel_id">
+                </div>
+            </li>
+            <li class="o_win" data-load="_add_customer_phone">
+                <div class="w100 ew">
+                    <span class="w7e">联系方式</span>
+                    <em class="nl1e ar co-back" id="add_customer_phone"></em>
+                </div>
+            </li>
+        </ul>
+        <ul class="clients-full-li">
+            <li>
+                <div class="w100 ew">
+                    <span class="w7e">状态</span>
+                    <div class="ar nr15x">
+                        <label class="mo-switch" data-co="success">
+                            <input id="add_customer_status" type="checkbox">
+                            <em></em>
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="clients-full-li arrow setting">
+            <li class="o_win" data-load="_add_extra_customer_debts">
+                <div class="w100 ew">
+                    <span class="w7e">尚欠金额<span class="sm co-warn">(选填)</span></span>
+                    <em class="nl1e ar co-back" id="extra_customer_debts"></em>
+                </div>
+            </li>            
+        </ul>
+        <ul class="clients-full-li setting">
+            <li class="o_win" data-load="_add_customer_address">
+                <div class="w100 ew">
+                    <span class="w7e">地址</span>
+                    <em class="icon icon-map-m ar co-back ll nr15x"></em>
+                </div>
+            </li>
+            <li class="co-back" id="add_customer_address"></li>
+        </ul>
+        <ul class="clients-full-li setting">
+            <li class="o_win" data-load="_add_customer_remarks">
+                <div class="w100 ew">
+                    <span class="w7e">备注<span class="sm co-warn">(选填)</span></span>
+                    <em class="icon icon-bi-m ar co-back ll nr15x"></em>
+                </div>
+            </li>
+            <li class="co-back" id="add_customer_remarks"></li>
+        </ul>
+        <div class="n20x mb10x">
+            <div class="x_win mo-btn w100 mo-l" data-co="main" onclick="add_customer()">保存</div>
+        </div>
+    </div>
+</div>
+<script>
+add_customer_box = new IScroll('#add_customer_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

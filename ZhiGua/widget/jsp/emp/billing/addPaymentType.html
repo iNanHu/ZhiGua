@@ -1,0 +1,25 @@
+<div class="tobar-z mm ban_move">
+    <div class="tonav">
+    </div>
+</div>
+<div id="set_name_box" class="wrapper b0">
+    <div class="scroller">
+        <ul class="user-li">
+            <li class="x_win" onclick="add_payment_type(0)">现金支付</li>
+            <li class="x_win" onclick="add_payment_type(1)">银联支付</li>
+            <li class="x_win" onclick="add_payment_type(2)">支付宝</li>
+            <li class="x_win" onclick="add_payment_type(3)">微信支付</li>
+        </ul>
+    </div>
+</div>
+<script>
+    set_name_box = new IScroll('#set_name_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

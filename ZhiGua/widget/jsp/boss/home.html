@@ -1,0 +1,84 @@
+<div id="home_box" class="wrapper hide-bar" style="top:0">
+    <div class="scroller fullbg fullbg-main">
+        <div class="tobar tm ml">
+            <div class="tonav">
+                <em class="goods-switch icon icon-block-m ml" data-win="win1" data-target=".home_goods"></em>
+                <p class="win_open page_map ms" data-win="win2" data-url="map">
+                    <span class="map-box dis-inbok w100 v2e nw15x"><i class="icon icon-map"></i> <span class="ms al">销售额统计</span></span>
+                </p>
+                <i class="mo-tonav icon icon-refresh fr pr ls" onclick="home()"></i>
+                <!-- <i class="o_popup mo-tonav icon icon-refresh fr pr ls" data-popup='["提示","popup.html","300","300"]'></i> -->
+            </div>
+        </div>
+        <div class="home-header">
+            <div class=home-bg>
+            	<div id="merchantSalesTrends_echarts" style="height: 85%;width: 100%"></div>
+            </div>
+            <ul class="user-info ew w100 ac">
+                <li class="o_win" data-load="_merchant_sales_echarts" onclick="set_merchantTotalSales_('D')">
+                    <h5 id="merchantTotalSales_D">0</h5>
+                    <p>日销售额</p>
+                </li>
+                <li class="o_win" data-load="_merchant_sales_echarts" onclick="set_merchantTotalSales_('M')">
+                    <h5 id="merchantTotalSales_M">0</h5>
+                    <p>月销售额</p>
+                </li>
+                <li class="o_win" data-load="_merchant_sales_echarts" onclick="set_merchantTotalSales_('Y')">
+                    <h5 id="merchantTotalSales_Y">0</h5>
+                    <p>年销售额</p>
+                </li>
+            </ul>
+        </div>
+        <table class="mo-grid bg-white mt15x mb20x sl">
+            <tr>
+                <td class="o_win" data-load="_statistical_analysis">
+                    <div class="to_balance">
+                        <p><i class="co1 icon icon-news-on ll"></i></p>
+                        <p>统计分析</p>
+                    </div>
+                </td>
+                <td class="o_win" data-load="_employee">
+                    <div class="to_transfer">
+                        <p><i class="co5 icon icon-accountsvg-on ll"></i></p>
+                        <p>员工管理</p>
+                    </div>
+                </td>
+                <td class="o_win" data-load="_customer">
+                    <div class="to_transfer">
+                        <p><i class="co3 icon icon-accountsvg-on ll"></i></p>
+                        <p>客户管理</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="o_win" data-load="_pr_order_list">
+                    <div class="to_balance">
+                        <p><i class="co4 icon icon-news-on ll"></i></p>
+                        <p>供应单管理</p>
+                    </div>
+                </td>
+                <td class="o_win" data-load="_inventory">
+                    <div class="to_pay">
+                        <p><i class="co2 icon icon-order-on ll"></i></p>
+                        <p>库存盘点</p>
+                    </div>
+                </td>
+                <td class="o_win" data-load="_off_line">
+                    <div class="to_pay">
+                        <p><i class="co6 icon icon-order-on ll"></i></p>
+                        <p>增值功能</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+    home_box = new IScroll('#home_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true,     
+        deceleration:0.0015
+    });
+</script>

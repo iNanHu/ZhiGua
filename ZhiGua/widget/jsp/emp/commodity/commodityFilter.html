@@ -1,0 +1,22 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <p class="page_title ls">商品筛选</p>
+    </div>
+</div>
+<div id="goods_screen_box" class="wrapper b0">
+    <div class="scroller">
+        <ul id="filter_supplier_select" class="user-li">
+        </ul>
+    </div>
+</div>
+<script>
+    goods_screen_box = new IScroll('#goods_screen_box', {
+    probeType: 3,
+    mouseWheel: true,
+    click: true,
+    interactiveScrollbars: true,
+    shrinkScrollbars: 'scale',
+    fadeScrollbars: true,
+    bindToWrapper: true
+});
+</script>

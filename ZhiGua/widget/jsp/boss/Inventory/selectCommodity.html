@@ -1,0 +1,35 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <!--<em class="x_win3 icon icon-left-m"><span>返回</span></em>-->
+        <p class="page_title ls">商品</p>
+    </div>
+</div>
+<div id="select_inventory_goods_box" class="wrapper b0">
+    <div class="scroller">
+        <div class="mo-search mh15x">
+            <input id="input_search_inventory_goods" class="o_key sm" type="text" placeholder="搜索商品" data-key-type="abc" readonly>
+            <span class="icon icon-search"></span>
+        </div>
+        <ul id="listview_inventory_goods" class="both goods-list bg-white nw20x-z nh1e-z mh15x">
+        	<!-- 
+            <li>
+                <div class="x_win ew ew-mw1e" >
+                    <div>
+                        <h6 class="goods-name mb15x">金丹奴1621</h6>
+                        <p class="co-info ss">库存：<span>300件</span></p>
+                        <p class="co-info ss">零售价：<span class="goods-price co-warn">18.00 / 件</span></p>
+                    </div>
+                </div>
+            </li>
+             -->
+        </ul>
+    </div>
+</div>
+<script>
+select_inventory_goods_box = new IScroll('#select_inventory_goods_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+</script>

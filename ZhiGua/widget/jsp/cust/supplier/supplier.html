@@ -1,0 +1,67 @@
+<div class="tobar ml ban_move">
+    <div class="tonav">
+        <p class="page_title ls">供应商</p>
+    </div>
+</div>
+<div id="supplier_box" class="wrapper supplier_wrapper">
+    <div id="supplier_scroller" class="scroller">
+        <div class="mo-search mh15x">
+            <input class="sm" id="m_input_search_merchantName" type="text" placeholder="输入客户首字母搜索试试？">
+            <span class="icon icon-search co-back"></span>
+        </div>
+        <ul id="listview_supplier" class="both clients-list bg-white nw20x-z mb15x v4e">
+        	<!-- 
+            <li id="MD-A">
+                <div class="ew">
+                    <div class="o_win" data-load="_supplier_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">智瓜科技</span>
+                        <span class="co-vice-hover">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            -->
+        </ul>
+    </div>
+</div>
+<!--快捷跳转-->
+<!--<ul class="szm-list">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+    <li>F</li>
+    <li>G</li>
+    <li>H</li>
+    <li>I</li>
+    <li>J</li>
+    <li>K</li>
+    <li>L</li>
+    <li>M</li>
+    <li>N</li>
+    <li>O</li>
+    <li>P</li>
+    <li>Q</li>
+    <li>R</li>
+    <li>S</li>
+    <li>T</li>
+    <li>U</li>
+    <li>V</li>
+    <li>W</li>
+    <li>X</li>
+    <li>Y</li>
+    <li>Z</li>
+</ul>-->
+<script>
+supplier_box = new IScroll('#supplier_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>
+

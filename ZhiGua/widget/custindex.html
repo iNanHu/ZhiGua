@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html data-sz="s">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5,maximum-scale=0.5, user-scalable=no">
+    <meta name="description" content="zhigua">
+    <meta name="author" content="Junbo">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/customer/customer.css">
+    <link rel="stylesheet" href="css/customer/color.css">
+    <link rel="stylesheet" href="icon/icon.css">
+    <link rel="stylesheet" href="css/moui.css">
+    <link rel="stylesheet" href="css/photo.css">
+    <title>1商客</title>
+</head>
+
+<body>
+<div id="win1" class="win win-open" data-win="1">
+    <div class="win-box"></div>
+    <div class="loading ban_move"></div>
+    <!--中间菜单-->
+    <!--<div class="fo-menu ban_move">
+        <ul class="mo-menu mh1e sl">
+            <li id="mo-menu1" class="o_win" data-load="order">
+                <div class="to_balance">
+                    <p><i class="co4 icon icon-edit-order ll"></i></p>
+                    <p class="ss">挂单</p>
+                </div>
+            </li>
+            <li id="mo-menu2" class="o_win" data-load="clients">
+                <div class="to_transfer">
+                    <p><i class="co5 icon icon-accountsvg-on ll"></i></p>
+                    <p class="ss">添加客户</p>
+                </div>
+            </li>
+            <li id="mo-menu3" class="o_win" data-load="need">
+                <div class="to_pay">
+                    <p><i class="co3 icon icon-goods-on ll"></i></p>
+                    <p class="ss">添加商品</p>
+                </div>
+            </li>
+            <li id="mo-menu4" class="o_win" data-load="need">
+                <div class="to_pay">
+                    <p><i class="co1 icon icon-supplier ll"></i></p>
+                    <p class="ss">笔记</p>
+                </div>
+            </li>
+            <li id="mo-menu5" class="o_win" data-load="bill">
+                <div class="to_pay">
+                    <p><i class="co2 icon icon-news-on ll"></i></p>
+                    <p class="sm">开单</p>
+                </div>
+            </li>
+        </ul>
+    </div>-->
+    <ul id="footer" class="fobar ban_move">
+        <li class="o_main active" data-load="home">
+            <i class="icon icon-home"></i>
+            <p>首页</p>
+        </li>
+        <li class="o_main" data-load='_message'>
+            <i class="icon icon-message"></i>
+            <div id="noReadMessageCount">
+            </div>
+            <p>消息</p>
+        </li>
+        <!--中间菜单呼出键，暂时关闭，如果需要。请把下面一行替换成<li id="fo_menu" class="menu">-->
+        <!--<li class="o_win menu" data-load="bill">
+            <i id="o_menu" class="icon icon-bi-m bg-main"></i>
+            &lt;!&ndash;如果这里是呼出菜单，则把这行显示出来&ndash;&gt;
+            &lt;!&ndash;<i id="x_menu" class="icon icon-close-m bg-warn"></i>&ndash;&gt;
+        </li>-->
+        <li class="o_main" data-load='_supplier'>
+            <i class="icon icon-supplier"></i>
+            <p>供应商</p>
+        </li>
+        <li class="o_main" data-load='_customer_info'>
+            <i class="icon icon-user"></i>
+            <p>我的</p>
+        </li>
+    </ul>
+</div>
+<div id="win2" class="win" data-win="2">
+    <div class="tobar ml ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m"><span>返回</span></em>
+            <p id="win2_title" class="page_title ls"></p>
+        </div>
+    </div>
+    <div class="win-box"></div>
+    <div class="loading ban_move"></div>
+</div>
+<div id="win3" class="win" data-win="3">
+    <div class="tobar ml ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m"><span>返回</span></em>
+            <p id="win3_title" class="page_title ls"></p>
+        </div>
+    </div>
+    <div class="win-box"></div>
+    <div class="loading ban_move"></div>
+</div>
+<div id="win4" class="win" data-win="4">
+    <div class="tobar ml ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m"><span>返回</span></em>
+            <p id="win4_title" class="page_title ls"></p>
+        </div>
+    </div>
+    <div class="win-box"></div>
+    <div class="loading ban_move"></div>
+</div>
+<div id="win5" class="win" data-win="5">
+    <div class="tobar ml ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m"><span>返回</span></em>
+            <p id="win5_title" class="page_title ls"></p>
+        </div>
+    </div>
+    <div class="win-box"></div>
+    <div class="loading ban_move"></div>
+</div>
+<div id="win6" class="win" data-win="6">
+    <div class="tobar ml ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m"><span>返回</span></em>
+            <p id="win6_title" class="page_title ls"></p>
+        </div>
+    </div>
+    <div class="win-box"></div>
+    <div class="loading ban_move"></div>
+</div>
+<div id="win7" class="win" data-win="7">
+    <div class="tobar ml ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m"><span>返回</span></em>
+            <p id="win7_title" class="page_title ls"></p>
+        </div>
+    </div>
+    <div class="win-box"></div>
+    <div class="loading ban_move"></div>
+</div>
+<div class="mo-msg"></div>
+<div class="mo-key-123 ban_move">
+    <table>
+        <thead>
+        <tr>
+            <th colspan="4" class="x_key_123"><i class="icon icon-bottom ms"></i></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="key" data-key="7"><em>7</em></td>
+            <td class="key" data-key="8"><em>8</em></td>
+            <td class="key" data-key="9"><em>9</em></td>
+            <td class="key_plus"><em><i class="icon icon-plus-m"></i></em></td>
+        </tr>
+        <tr>
+            <td class="key" data-key="4"><em>4</em></td>
+            <td class="key" data-key="5"><em>5</em></td>
+            <td class="key" data-key="6"><em>6</em></td>
+            <td class="key_minus"><em><i class="icon icon-minus-m"></i></em></td>
+        </tr>
+        <tr>
+            <td class="key" data-key="1"><em>1</em></td>
+            <td class="key" data-key="2"><em>2</em></td>
+            <td class="key" data-key="3"><em>3</em></td>
+            <td class="key_del"><em><i class="icon icon-del-m"></i></em></td>
+        </tr>
+        <tr>
+            <td class="key_reset"><em><i class="icon icon-refresh-m"></i></em></td>
+            <td class="key" data-key="0"><em>0</em></td>
+            <td class="key" data-key="."><em><i class="icon icon-dian"></i></em></td>
+            <td class="key_btn"><b class="key_next mm">Tab</b><b class="key_end mm">完成</b></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="mo-key-abc ban_move">
+    <table>
+        <thead>
+        <tr>
+            <th colspan="8" class="x_key_abc"><i class="icon icon-bottom sm co-back"></i></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="key" data-key="Q"><em>Q</em></td>
+            <td class="key" data-key="W"><em>W</em></td>
+            <td class="key" data-key="E"><em>E</em></td>
+            <td class="key" data-key="R"><em>R</em></td>
+            <td class="key" data-key="T"><em>T</em></td>
+            <td class="key" data-key="Y"><em>Y</em></td>
+            <td class="key" data-key="P"><em>P</em></td>
+            <td class="key" data-key="L"><em>L</em></td>
+        </tr>
+        <tr>
+            <td class="key" data-key="A"><em>A</em></td>
+            <td class="key" data-key="S"><em>S</em></td>
+            <td class="key" data-key="D"><em>D</em></td>
+            <td class="key" data-key="F"><em>F</em></td>
+            <td class="key" data-key="G"><em>G</em></td>
+            <td class="key" data-key="H"><em>H</em></td>
+            <td class="key" data-key="J"><em>J</em></td>
+            <td class="key" data-key="K"><em>K</em></td>
+        </tr>
+        <tr>
+            <td class="key" data-key="Z"><em>Z</em></td>
+            <td class="key" data-key="X"><em>X</em></td>
+            <td class="key" data-key="C"><em>C</em></td>
+            <td class="key" data-key="B"><em>B</em></td>
+            <td class="key" data-key="N"><em>N</em></td>
+            <td class="key" data-key="M"><em>M</em></td>
+            <td colspan="2" class="key_del"><em><i class="icon icon-del-m lm"></i></em></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="key_reset"><em>123</em></td>
+            <td class="key" data-key="U"><em>U</em></td>
+            <td class="key" data-key="I"><em>I</em></td>
+            <td class="key" data-key="O"><em>O</em></td>
+            <td class="key" data-key="V"><em>V</em></td>
+            <td colspan="2" class="key_btn"><b class="key_next mm">Tab</b><b class="key_end mm">完成</b></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--基础-->
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/iscroll-probe.js"></script>
+<script src="js/echarts.min.js"></script>
+<!--交互-->
+<script src="js/main.js"></script>
+<script src="js/api.js"></script>
+<script src="js/custpage.js"></script>
+<!--数据-->
+<script src="js/zgjs/common.js"></script>
+<script src="js/zgjs/custservice.js"></script>
+<script src="js/zgjs/custindex.js"></script>
+<!--上传图片-->
+<script src="js/photo/iscroll-zoom.js"></script>
+<script src="js/photo/hammer.js"></script>
+<script src="js/photo/lrz.all.bundle.js"></script>
+<script src="js/photo/PhotoClip.min.js"></script>
+</body>
+</html>

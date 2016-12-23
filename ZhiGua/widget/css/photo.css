@@ -1,0 +1,58 @@
+﻿@charset "utf-8";
+/*图片裁剪-触屏设备*/
+/* CSS Document */
+
+.htmleaf-container{
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: #000;
+    display: none;
+    z-index: 9999999;
+}
+
+#clipArea {
+    height:100%;
+}
+
+
+/*上传图标*/
+#file{
+    float: left;
+    height: 100%;
+}
+#up_photo_box .btn{
+    float: right;
+    height: 100%;
+    width: 8rem;
+    background: none;
+    border: 0;
+    outline: none;
+    color: #fff;
+    z-index: 999;
+}
+
+
+.filename {
+    position: absolute;
+    outline: 0 none;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    color: #999;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    cursor: default;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 0;
+    top: 9.2rem;
+    text-align: center;
+
+}
+
+#up_photo_box *{-webkit-user-select: none;user-select: none;-webkit-touch-callout:none;-webkit-text-size-adjust: none;text-size-adjust: none;}

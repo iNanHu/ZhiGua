@@ -1,0 +1,75 @@
+<div class="tobar-z mm">
+    <div class="tonav">
+        <i class="o_win mo-tonav icon icon-edit-m fr pr ml" data-load="_edit_employee"></i>
+    </div>
+</div>
+<div id="det_employee_details_box" class="wrapper b0">
+    <div class="scroller fullbg fullbg-white">
+        <div class="clients-header">
+            <div class=clients-bg></div>
+            <div class="clients-img" id="det_employee_photo_img" style="background-image: url(imgs/logo.png)"></div>
+            <p class="clients-name ac ls" id="det_employee_name">员工名</p>
+            <p class="clients-shop ac lm"><span><i class="icon icon-phone s1e5"></i><span id="det_employee_phone"></span></span></p>
+        </div>
+        <ul class="clients-full-li arrow setting">
+            <li class="o_win" data-load="_employee_qrcode">
+                <div class="w100 ew">
+                    <span class="co-info w5e">员工绑定:</span>
+                    <span>
+                        <span class="co-success" id="det_employee_isWXregister"></span>
+                    </span>
+                    <span class="ar">
+                        <i class="ewm-img" id="det_employee_qrcodeURL" style="background-image: url(imgs/ewm.png);"></i>
+                    </span>
+                </div>
+            </li>
+        </ul>
+        <ul class="clients-full-li setting">
+            <li>
+                <div class="w100 ew">
+                    <span class="co-info w5e">员工编号:</span>
+                    <em class="al " id="det_employee_id"></em>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w5e">所属门店:</span>
+                    <em class="al" id="det_employee_shopName"></em>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w5e">密码:</span>
+                    <em class="al" id="det_employee_pwd"></em>
+                </div>
+            </li>
+            <li>
+                <div class="w100 ew">
+                    <span class="co-info w5e">性别:</span>
+                    <em class="al" id="det_employee_sex"></em>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w5e">地址:</span>
+                    <em class="al" id="det_employee_address"></em>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w5e">备注:</span>
+                    <em class="al" id="det_employee_remarks"></em>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+det_employee_details_box = new IScroll('#det_employee_details_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+</script>
+

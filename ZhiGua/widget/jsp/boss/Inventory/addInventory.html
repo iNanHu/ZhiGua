@@ -1,0 +1,66 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+    </div>
+</div>
+<div id="inventory_box" class="wrapper" style="bottom:3.5rem">
+    <div class="scroller">
+        <ul class="user-li arrow">
+            <li class="o_win" data-load="_select_inventory_shop">
+                <em class="co-info">门店：</em>
+                <span id="span_inventory_shop_name">选择门店</span><input id="input_inventory_shop_code" type="hidden">
+            </li>
+        </ul>
+        <div class="w100 bk-top bg-white mh15x">
+            <div class="w100  h3e v3e nw20x ew">
+                <div class="w60">
+                    <span class="co-info">盘盈:<em class="co-error ml" id="pgoodsCount">0</em></span><span class="ml1e co-info">盘亏:<em class="co-error ml" id="rgoodsCount">0</em></span>
+                    <!-- <span>提货码：</span><b class="co-warn">您还未付款</b> -->
+                </div>
+                <div class="o_win w40 ar" data-load="_select_inventory_commodity">
+                    <i class="icon icon-add-m ls"></i>
+                    <span>选择商品</span>
+                </div>
+            </div>
+            <ul id="inventory_goods_listview" class="both goods-list bg-white nw20x-z nh1e-z">
+            	<!-- 
+                <li class="move_del">
+                    <div class="o_win ew ew-mw15x" data-load="_edit_goods">
+                        <div class="goods-img nr20x" style="background-image:url(imgs/goods1.jpg)"></div>
+                        <div>
+                            <h6 class="goods-name mb15x">商品名称短标题</h6>
+                            <p class="co-info sm">单价：<span class="goods-price co-warn">20.00</span></p>
+                            <p class="co-info sm">小计：<span class="goods-price co-warn">18.00 / 件</span></p>
+                        </div>
+                    </div>
+                    <ul class="edit-number">
+                        <li class="jian" data-id="' + goods[i].id + '"><i class="icon icon-minus"></i></li>
+                        <li class="value gBuyNum' + goods[i].id + '">1</li>
+                        <li class="jia" data-id="' + goods[i].id + '"><i class="icon icon-plus"></i></li>
+                    </ul>
+                    <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+                </li>
+                -->
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="bill-bar nw20x ban_move">
+    <ul class="w100 ew">
+        <li class="">
+            <p>盘点总金额：<span class="co-error" id="span_total_amount">￥0.00</span></p>
+        </li>
+        <li class="w6e">
+            <button class="o_win basket-pay w100 mo-btn mo-m" data-load="_save_inventory" data-co="error">确认</button>
+        </li>
+    </ul>
+</div>
+
+<script>
+inventory_box = new IScroll('#inventory_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+</script>
+

@@ -1,0 +1,21 @@
+<div class="tobar-z mm ban_move">
+    <div class="tonav">
+    </div>
+</div>
+<div id="select_print_equipment_box" class="wrapper b0">
+    <div class="scroller">
+        <ul id="select_listview_printer" class="user-li">
+        </ul>
+    </div>
+</div>
+<script>
+select_print_equipment_box = new IScroll('#select_print_equipment_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

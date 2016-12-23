@@ -1,0 +1,231 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <em class="o_win mo-tonav icon icon-add-m fr pr ls" data-load="_add_customer"></em>
+        <em class="o_win mo-tonav icon icon-screen fr pr ls" data-load="_customer_filter"></em>
+    </div>
+</div>
+<div id="m_customer_box" class="wrapper b0 clients_wrapper">
+    <div id="clients_scroller" class="scroller">
+        <div class="mo-search mh15x">
+            <input id="m_input_search_customer" class="o_key sm" type="text" placeholder="输入客户首字母搜索试试？" data-key-type="abc" readonly>
+            <input id="filter_memberLevel_search_customer" type="hidden" value="-1">
+            <span class="icon icon-search co-back"></span>
+        </div>
+        <ul id="listview_customer_manage" class="both clients-list bg-white nw20x-z mb15x v4e">
+        	<!-- 
+            <li id="MD-A">
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">张三三</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">张三二</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">张三五</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li id="MD-L">
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">L开头</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">李四</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+            <li id="MD-X">
+                <div class="ew">
+                    <div class="o_win" data-load="_customer_details">
+                        <i class="clients-list-img" style="background-image: url(imgs/usericongg.jpg);"></i>
+                        <span class="mm">定位到X</span>
+                        <span class="co-info">15162000000</span>
+                    </div>
+                </div>
+            </li>
+             -->
+        </ul>
+    </div>
+</div>
+<!--快捷跳转-->
+<!--<ul class="szm-list">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+    <li>F</li>
+    <li>G</li>
+    <li>H</li>
+    <li>I</li>
+    <li>J</li>
+    <li>K</li>
+    <li>L</li>
+    <li>M</li>
+    <li>N</li>
+    <li>O</li>
+    <li>P</li>
+    <li>Q</li>
+    <li>R</li>
+    <li>S</li>
+    <li>T</li>
+    <li>U</li>
+    <li>V</li>
+    <li>W</li>
+    <li>X</li>
+    <li>Y</li>
+    <li>Z</li>
+</ul>-->
+<script>
+m_customer_box = new IScroll('#m_customer_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>
+

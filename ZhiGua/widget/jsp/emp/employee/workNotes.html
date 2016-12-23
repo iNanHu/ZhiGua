@@ -1,0 +1,37 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <!--<em class="x_win mo-back3 icon icon-left-m"><span>返回</span></em>-->
+        <!--<p class="page_title ls">消息</p>-->
+        <em class="o_win mo-tonav icon icon-plus fr pr ls" data-load="_add_work_notes"></em>
+    </div>
+</div>
+<div id="workNotes_box" class="wrapper b0">
+    <div class="scroller">
+        <div class="mo-search mh15x">
+            <input class="sm" id="m_input_search_workNotes"  type="text" placeholder="搜索笔记" oninput="m_search_workNotes()">
+            <span class="icon icon-search co-back sm row1 v1e5"></span>
+        </div>
+        <ul id="listview_workNotes_manage" class="both need-list bg-white nw20x-z mb15x v2e nh20x-z">
+        	<!-- 
+            <li class="move_del">
+                <div class="o_win ew" data-load="_work_notes_details" data-title="张三二">
+                    <div><i class="co-warn">28/08</i></div>
+                    <div>
+                        <h4 class="mm row1">进货笔记短标题</h4>
+                        <p class="co-back sm row1 v1e5">你好，在吗？</p>
+                    </div>
+                </div>
+                <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+            </li>
+             -->
+        </ul>
+    </div>
+</div>
+<script>
+workNotes_box = new IScroll('#workNotes_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+</script>

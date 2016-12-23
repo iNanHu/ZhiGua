@@ -1,0 +1,22 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <p class="page_title ls">客户筛选</p>
+    </div>
+</div>
+<div id="filter_memberLevel_box" class="wrapper b0">
+    <div class="scroller">
+        <ul id="filter_memberLevel_select" class="user-li">
+        </ul>
+    </div>
+</div>
+<script>
+filter_memberLevel_box = new IScroll('#filter_memberLevel_box', {
+    probeType: 3,
+    mouseWheel: true,
+    click: true,
+    interactiveScrollbars: true,
+    shrinkScrollbars: 'scale',
+    fadeScrollbars: true,
+    bindToWrapper: true
+});
+</script>

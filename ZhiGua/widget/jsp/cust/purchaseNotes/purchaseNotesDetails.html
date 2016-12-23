@@ -1,0 +1,43 @@
+<div class="tobar ml ban_move">
+    <div class="tonav">
+    	<em class="x_win mo-back icon icon-left-m" data-win="win3"><span>返回</span></em>
+        <p class="page_title ml">笔记详情</p>
+        <!--<i class="icon icon-map fr pr"></i>-->
+    </div>
+</div>
+<div id="det_purchaseNotes_box" class="wrapper b0">
+    <div class="scroller">
+        <ul class="clients-full-li setting">
+            <li>
+                <div class="ew">
+                    <span class="w5e" >日期:</span>
+                    <em class="co-warn" id="det_m_purchaseNotes_createTime"></em>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="w5e" >标题:</span>
+                    <em id="det_m_purchaseNotes_title"></em>
+                </div>
+            </li>            
+            <li>
+                <div class="ew">
+                    <span class="w5e" >内容:</span>
+                    <em id="det_m_purchaseNotes_content"></em>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+det_purchaseNotes_box = new IScroll('#det_purchaseNotes_box', {
+        probeType: 3,
+        scrollbars: true,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

@@ -1,0 +1,38 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <p class="page_title ls">客户二维码</p>
+    </div>
+</div>
+<div id="det_customer_photo_box" class="wrapper b0">
+    <div class="scroller">
+        <div id="page-qr_code">
+            <div class="img">
+                <div class="img_box">
+                    <div class="qr_code_user wc ac">
+                        <div class="user-img wc" id="det_customer_photo_img_" style="background-image:url(imgs/logo.png)"></div>
+                        <h3 class="user_name mt10x"></h3>
+                    </div>
+                    <img id="det_customer_qrcodeURL_"  src="imgs/ewm.png">
+                    <div id="det_customer_isWXregister_">
+                    	<!-- 
+                    	<p class="sx ac mh1e co-success bold"></p>
+                    	<div class="w100 mo-btn mo-m" data-co="error">解除绑定</div>
+                    	 -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+det_customer_photo_box = new IScroll('#det_customer_photo_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

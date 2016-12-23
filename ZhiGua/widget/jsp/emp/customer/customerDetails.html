@@ -1,0 +1,98 @@
+<div class="tobar-z mm">
+    <div class="tonav">
+        <i class="o_win mo-tonav icon icon-edit-m fr pr ml" data-load="_edit_customer"></i>
+    </div>
+</div>
+<div id="det_customer_details_box" class="wrapper b0">
+    <div class="scroller fullbg fullbg-white">
+        <div class="clients-header">
+            <div class=clients-bg></div>
+            <div class="clients-img" id="det_customer_photo_img" style="background-image: url(imgs/logo.png)"></div>
+            <p class="clients-name ac ls" id="det_customer_name">客户名</p>
+            <p class="clients-shop ac lm"><span><i class="icon icon-phone s1e5"></i><span id="det_customer_phone"></span></span></p>
+        </div>
+        <ul class="clients-full-li arrow setting">
+            <li class="o_win" data-load="_customer_qrcode">
+                <div class="w100 ew">
+                    <span class="co-info w5e">客户绑定:</span>
+                    <span>
+                        <span class="co-success" id="det_customer_isWXregister"></span>
+                    </span>
+                    <span class="ar">
+                        <i class="ewm-img" id="det_customer_qrcodeURL" style="background-image: url(imgs/ewm.png);"></i>
+                    </span>
+                </div>
+            </li>
+        </ul>
+        <ul class="clients-full-li setting">
+            <li>
+                <div class="w100 ew">
+                    <span class="co-info w5e">客户订单:</span>
+                    <em class="al co-warn" id="customer_order_count">0笔</em>
+                    <span class="ar"><div class="o_win mo-btn mo-s" data-co="vice" data-load="_billing" onclick="set_bill_cust()">开单</div></span>
+                    <span class="ar"><div class="o_win mo-btn mo-s" data-co="vice" data-load="_customer_order">查看订单</div></span>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w5e">客户类型:</span>
+                    <em class="al" id="det_memberLevel_name"></em>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w5e">地址:</span>
+                    <em class="al" id="det_customer_address"></em>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w5e">状态:</span>
+                    <em class="al" id="det_customer_status"></em>
+                </div>
+            </li>
+            <li>
+                <div class="w100 ew">
+                    <span class="co-info w5e">总欠款:</span>
+                    <em class="al" id="det_customer_arrears">0</em>
+                    <span class="ar"><div class="o_win mo-btn mo-s" data-co="vice" data-load="_det_extra_customer_debts">补账</div></span>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w7e">最近交易日期:</span>
+                    <em class="al" id="det_customer_latestTradingTime"></em>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w5e">备注:</span>
+                    <em class="al" id="det_customer_remarks"></em>
+                </div>
+            </li>
+            <li>
+                <div class="ew">
+                    <span class="co-info w9e">最近交易的商品:</span>
+                    <em class="al">(一个月内)</em>
+                </div>
+            </li>            
+            <ul id="last_sale_goods_view" class="goods-list list-bg nw20x nh15x-z">
+            	<!-- 
+                <li>
+                    <h6>商品名称A</h6>
+                    <div class="nr1e-z co-back sm"><span>单价:￥12.00</span><span>数量:x2</span><span>金额:￥18.00</span></div>
+                </li>
+                -->
+           	</ul>                
+        </ul>
+    </div>
+</div>
+<script>
+det_customer_details_box = new IScroll('#det_customer_details_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+</script>
+

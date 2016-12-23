@@ -1,0 +1,319 @@
+@charset "utf-8";
+/*主体*/
+/*辅助*/
+/*阅读(默认)*/
+/*辅助阅读*/
+/*信息*/
+/*成功*/
+/*提醒/警告*/
+/*错误/强调*/
+/*黑色*/
+/*白色*/
+body {
+  background-color: #f6f6f6;
+}
+.co-main {
+  color: #16aaff;
+}
+.co-main.hover:hover {
+  color: #1cbaff;
+}
+.co-main.active:active {
+  color: #1199ff;
+}
+.bg-main {
+  background: #1cbbff;
+}
+.bg-main.hover:hover {
+  background: #23cbff;
+}
+.bg-main.active:active {
+  background: #16aaff;
+}
+.bk-main {
+  border-color: #16aaff;
+}
+.bk-main.hover:hover {
+  border-color: #1cbaff;
+}
+.bk-main.active:active {
+  border-color: #1199ff;
+}
+/*辅助*/
+.co-vice {
+  color: #ff6600;
+}
+.co-vice-hover,.co-vice.hover:hover {
+  color: #ffb822;
+}
+.co-vice.active:active {
+  color: #ff9715;
+}
+.bg-vice {
+  background: #ffba46;
+}
+.bg-vice-hover,.bg-vice.hover:hover {
+  background: #ffca54;
+}
+.bg-vice.active:active {
+  background: #ffa939;
+}
+.bk-vice {
+  border-color: #ffb822;
+}
+.bk-vice.hover:hover {
+  border-color: #ffb822;
+}
+.bk-vice.active:active {
+  border-color: #ff9715;
+}
+/*阅读(默认)*/
+body,
+.co-read {
+  color: #454545;
+}
+.co-read.hover:hover,.co-read-hover {
+  color: #666;
+}
+.co-read.active:active {
+  color: #444444;
+}
+.bg-read {
+  background: #f6f8f8;
+}
+.bg-read.hover:hover {
+  background: #fbfbfb;
+}
+.bg-read.active:active {
+  background: #f0f0f0;
+}
+.bk-read {
+  border-color: #dadfe0;
+}
+.bk-read.hover:hover {
+  border-color: #cfcfcf;
+}
+.bk-read.active:active {
+  border-color: #c0c0c0;
+}
+/*辅助阅读*/
+.co-back {
+  color: #aaa;
+}
+.co-back.hover:hover {
+  color: #aaa;
+}
+.co-back.active:active {
+  color: #666;
+}
+.bg-back {
+  background: #efefef;
+}
+.bg-back.hover:hover {
+  background: #fbfbfb;
+}
+.bg-back.active:active {
+  background: #efefef;
+}
+.bk-back {
+  border-color: #ececec;
+}
+.bk-back.hover:hover {
+  border-color: #e8eeef;
+}
+.bk-back.active:active {
+  border-color: #dadada;
+}
+/*信息*/
+.co-info {
+  color: #308dbf;
+}
+.co-info.hover:hover {
+  color: #1cbaff;
+}
+.co-info.active:active {
+  color: #1199ff;
+}
+.bg-info {
+  background: #1cbbff;
+}
+.bg-info.hover:hover {
+  background: #23cbff;
+}
+.bg-info.active:active {
+  background: #16aaff;
+}
+.bk-info {
+  border-color: #16aaff;
+}
+.bk-info.hover:hover {
+  border-color: #1cbaff;
+}
+.bk-info.active:active {
+  border-color: #1199ff;
+}
+/*成功*/
+.co-success {
+  color: #3eb93e;
+}
+.co-success.hover:hover {
+  color: #a4e632;
+}
+.co-success-active {
+  color: #84c91f;
+}
+.bg-success {
+  background: #93e354;
+}
+.bg-success.hover:hover {
+  background: #b1ed3a;
+}
+.bg-success-active {
+  background: #90d325;
+}
+.bk-success {
+  border-color: #95d828;
+}
+.bk-success.hover:hover {
+  border-color: #a4e632;
+}
+.bk-success-active {
+  border-color: #84c91f;
+}
+/*提醒/警告*/
+.co-warn {
+  color: #ff9900;
+}
+.co-warn.hover:hover {
+  color: #ffb822;
+}
+.co-warn.active:active {
+  color: #ff9715;
+}
+.bg-warn {
+  background: #ffba46;
+}
+.bg-warn.hover:hover {
+  background: #ffca54;
+}
+.bg-warn.active:active {
+  background: #ffa939;
+}
+.bk-warn {
+  border-color: #ff6600;
+}
+.bk-warn.hover:hover {
+  border-color: #ffb822;
+}
+.bk-warn.active:active {
+  border-color: #ff9715;
+}
+/*错误/强调*/
+.co-error {
+  color: #ff5049;
+}
+.co-error.hover:hover {
+  color: #ff8060;
+}
+.co-error.active:active,.co-error-active {
+  color: #ff6040;
+}
+.bg-error {
+  background: #ff5049;
+}
+.bg-error.hover:hover {
+  background: #ff998f;
+}
+.bg-error.active:active {
+  background: #ff796f;
+}
+.bk-error {
+  border-color: #ff796f;
+}
+.bk-error.hover:hover {
+  border-color: #ff887e;
+}
+.bk-error.active:active {
+  border-color: #ff685e;
+}
+/*黑色*/
+.co-black {
+  color: #000000;
+}
+.co-black.hover:hover {
+  color: #000000;
+}
+.co-black.active:active {
+  color: #000000;
+}
+.bg-black {
+  background: #000000;
+}
+.bg-black.hover:hover {
+  background: #000000;
+}
+.bg-black.active:active {
+  background: #000000;
+}
+.bk-black {
+  border-color: #000000;
+}
+.bk-black.hover:hover {
+  border-color: #000000;
+}
+.bk-black.active:active {
+  border-color: #000000;
+}
+/*白色*/
+.co-white {
+  color: #ffffff;
+}
+.co-white.hover:hover {
+  color: #ffffff;
+}
+.co-white.active:active {
+  color: #ffffff;
+}
+.bg-white {
+  background: #ffffff;
+}
+.bg-white.hover:hover {
+  background: #ffffff;
+}
+.bg-white.active:active {
+  background: #ffffff;
+}
+.bk-white {
+  border-color: #ffffff;
+}
+.bk-white.hover:hover {
+  border-color: #ffffff;
+}
+.bk-white.active:active {
+  border-color: #ffffff;
+}
+.bg-main,
+.bg-vice,
+.bg-read,
+.bg-info,
+.bg-success,
+.bg-warn,
+.bg-error,
+.bg-black {
+  color: #ffffff;
+}
+.bg1 {
+  background: #c29de9;
+}
+.bg2 {
+  background: #ff9289;
+}
+.bg3 {
+  background: #ffc13d;
+}
+.bg4 {
+  background: #66ccff;
+}
+.bg5 {
+  background: #abe156;
+}

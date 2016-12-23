@@ -1,0 +1,40 @@
+<div class="tobar ml ban_move">
+    <div class="tonav">
+        <!-- <em class="x_win mo-tonav icon icon-left-m fl pl ls"><span>返回</span></em> -->
+        <p class="page_title ls">商品</p>
+        <em class="o_win mo-tonav icon icon-add-m fr pr ls" data-load="_add_commodity"></em>
+        <em class="o_win mo-tonav icon icon-screen fr pr ls" data-load="_commodity_filter"></em>
+    </div>
+</div>
+<div id="commodity_box" class="wrapper">
+    <div class="scroller">
+        <div class="mo-search mh15x">
+            <input class="o_key sm" id="m_input_search_commodity" type="text" placeholder="搜索商品" data-key-type="abc" readonly>
+            <input id="filter_supplier_search_commodity" type="hidden" value="-1">
+            <span class="icon icon-search"></span>
+        </div>
+        <ul id="listview_commodity_manage" class="both goods-list bg-white nw20x-z nh1e-z mh15x">
+        	<!-- 
+            <li class="move_del">
+                <div class="o_win ew ew-mw1e" data-load="_commodity_details">
+                    <div class="goods-img nr20x" style="background-image:url(imgs/goods1.jpg)"></div>
+                    <div>
+                        <h6 class="goods-name mb15x">商品名称短标题</h6>
+                        <p class="co-info ss">库存：<span>300件</span></p>
+                        <p class="co-info ss">零售价：<span class="goods-price co-warn">18.00 / 件</span></p>
+                    </div>
+                </div>
+                <div class="move-del-nav del_list"><i class="icon icon-delete"></i></div>
+            </li>
+             -->
+        </ul>
+    </div>
+</div>
+<script>
+commodity_box = new IScroll('#commodity_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true
+    });
+</script>

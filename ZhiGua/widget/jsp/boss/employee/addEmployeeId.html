@@ -1,0 +1,27 @@
+<div class="tobar-z mm ban_move">
+    <div class="tonav">
+    </div>
+</div>
+<div id="add_employee_id_box" class="wrapper">
+    <div class="scroller">
+        <div>
+            <div class="input-full v3e5">
+                <input type="text" id="m_add_employee_id" value="" placeholder="请输入员工编号">
+            </div>
+        </div>
+    	<div class="n20x mb10x">
+        	<div class="x_win mo-btn w100 mo-l" data-co="main" onclick="add_employee_id()">确认</div>
+    	</div>    
+    </div>
+</div>
+<script>
+add_employee_id_box = new IScroll('#add_employee_id_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>
