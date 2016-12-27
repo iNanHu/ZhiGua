@@ -15,6 +15,7 @@
 
 @implementation UserDataMananger
 
+@synthesize curLoaction2D;
 static UserDataMananger *manager;
 + (id)sharedManager
 {
@@ -95,5 +96,14 @@ static UserDataMananger *manager;
     return [nRemPsd boolValue];
 }
 
+- (void)setCurLoaction2D:(CLLocationCoordinate2D)curLoaction2Dc {
+    
+    curLoaction2D = curLoaction2Dc;
+}
+
+- (CLLocationCoordinate2D)curLoaction2D {
+    
+    return curLoaction2D;
+}
 
 @end

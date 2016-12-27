@@ -7,6 +7,7 @@
 //
 
 #import "ZGManagerVC.h"
+#import "ZGUserMapVC.h"
 #import "SHAlertView.h"
 #import "PrintMainVC.h"
 #import "MBProgressHUD+Add.h"
@@ -54,6 +55,7 @@
     [[APIEventCenter defaultCenter] addEventListener:self selector:@selector(handleEvent:) name:@"loginClick"];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(autoLogin) name:AUTOLOGIN object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(printInfo) name:NOTI_PRINT_STATE_NOPAPER object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(printCoverOpen) name:NOTI_PRINT_STATE_COVEROPEN object:nil];
 
 }
 
@@ -69,6 +71,11 @@
 
 - (void)printInfo {
     [self showAlertViewWithTitle:@"打印机缺纸，请更换打印纸"];
+}
+
+- (void)printCoverOpen {
+    
+    [self showAlertViewWithTitle:@"打印机纸仓打开"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -177,7 +184,12 @@
         PrintMainVC *SVC = [[PrintMainVC alloc] init];
         [self.navigationController pushViewController:SVC animated:YES];
         return NO;
-    }else if([url containsString:EXITURL]) {
+    } else if([url containsString:USERLOCURL]){
+    
+        UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ZGUserMapVC *mapVC = [main instantiateViewControllerWithIdentifier:@"ZGUserMapVC"];
+        [self.navigationController pushViewController:mapVC animated:YES];
+    } else if([url containsString:EXITURL]) {
         
         if ([[YDBlutoothTool sharedBlutoothTool] isPrint]) {
             [self showAlertViewWithTitle:@"设备仍在打印中..."];

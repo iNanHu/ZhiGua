@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CLLocation.h>
 
 @interface UserDataMananger : NSObject
 
@@ -15,6 +16,7 @@
 @property (nonatomic, strong) NSString *strUserAPsd;
 @property (nonatomic, strong) NSString *strRoleType;
 @property (nonatomic, assign) BOOL bRemPsd;
+@property (nonatomic, assign) CLLocationCoordinate2D curLoaction2D;
 
 + (id)sharedManager;
 @end

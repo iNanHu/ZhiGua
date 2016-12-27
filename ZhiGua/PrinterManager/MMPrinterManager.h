@@ -23,5 +23,8 @@
 
 //更新设备打印状态
 - (void)printStatusWithBtName:(NSString *)strBtName andBtMac:(NSString *)strBtMac andPrintState:(NSInteger) printState;
-
+//获取所有商客位置信息
+- (void)getUserPostionList;
+//上报商客状态
+- (void)reportLatitude:(double)latitude andLongitude:(double)longitude;
 @end

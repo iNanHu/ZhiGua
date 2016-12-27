@@ -61,18 +61,22 @@
   return _locationManager;
 }
 
-+ (void)statrLocation
++ (BOOL)statrLocation
 {
-  if ([CLLocationManager locationServicesEnabled]) {
+  if ([CLLocationManager locationServicesEnabled] && ![[ZJLocationService sharedModel] isLocation]) {
     [[[self sharedModel] locationManager] startUpdatingLocation];
+      [[ZJLocationService sharedModel]setIsLocation:YES];
     NSLog(@"begin updating location");
+      return YES;
   }
+  return NO;
 }
 
 + (void)stopLocation
 {
   [[[self sharedModel] locationManager] stopUpdatingLocation];
   NSLog(@"did stop location");
+    [[ZJLocationService sharedModel]setIsLocation:NO];
 }
 
 + (void)backgroundForPauseTime:(double)time locationCounts:(int)counts

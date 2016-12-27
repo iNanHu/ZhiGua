@@ -13,6 +13,6 @@ target 'ZhiGua' do
   pod 'KVOController',		'~> 1.0.2'
   pod 'ReactiveCocoa', '~> 2.3'
   pod 'UMeng', '~> 2.2.1'
-  #pod 'UMeng-Analytics', '~> 2.2.0'
+  pod 'AMap3DMap'
   #pod 'JPush', '~> 2.2.0'
 end

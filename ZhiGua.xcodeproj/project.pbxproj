@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04A20A9BD697DA35798D85E5 /* libPods-ZhiGua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB13A41F5FE1217D0F20BBD0 /* libPods-ZhiGua.a */; };
 		081470B91E02DC4E00FE3678 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081470B81E02DC4E00FE3678 /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		08167F3F1E0FDE1E0060BB5C /* ZGUserMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 08167F3E1E0FDE1E0060BB5C /* ZGUserMapVC.m */; };
 		082213FB1E01452C00CCF767 /* APICloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 082213FA1E01452C00CCF767 /* APICloud.a */; };
 		082213FE1E01457800CCF767 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 082213FC1E01457800CCF767 /* Images.xcassets */; };
 		082213FF1E01457800CCF767 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 082213FD1E01457800CCF767 /* Info.plist */; };
@@ -139,6 +140,7 @@
 		086C056F1DD5617000501449 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 086C056E1DD5617000501449 /* libstdc++.tbd */; };
 		086C05711DD5617B00501449 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 086C05701DD5617B00501449 /* libicucore.tbd */; };
 		086C05731DD5618400501449 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 086C05721DD5618400501449 /* libz.tbd */; };
+		08CB54CF1E0FB8E5002F9DCE /* AnimatedAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB54CE1E0FB8E5002F9DCE /* AnimatedAnnotation.m */; };
 		7BB0195E1D902CD50020776F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB0195D1D902CD50020776F /* CoreImage.framework */; };
 		7BB019621D902D380020776F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB019611D902D380020776F /* QuartzCore.framework */; };
 		7BB019641D902D410020776F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB019631D902D410020776F /* UIKit.framework */; };
@@ -149,6 +151,8 @@
 /* Begin PBXFileReference section */
 		081470B81E02DC4E00FE3678 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		081470BA1E037F8A00FE3678 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = ZhiGua/PrinterManager/UMMobClick.framework; sourceTree = "<group>"; };
+		08167F3D1E0FDE1E0060BB5C /* ZGUserMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGUserMapVC.h; sourceTree = "<group>"; };
+		08167F3E1E0FDE1E0060BB5C /* ZGUserMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGUserMapVC.m; sourceTree = "<group>"; };
 		082213FA1E01452C00CCF767 /* APICloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = APICloud.a; path = ZhiGua/lib/Engine/APICloud.a; sourceTree = "<group>"; };
 		082213FC1E01457800CCF767 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ZhiGua/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		082213FD1E01457800CCF767 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ZhiGua/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -396,6 +400,8 @@
 		086C056E1DD5617000501449 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		086C05701DD5617B00501449 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		086C05721DD5618400501449 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		08CB54CD1E0FB8E5002F9DCE /* AnimatedAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedAnnotation.h; sourceTree = "<group>"; };
+		08CB54CE1E0FB8E5002F9DCE /* AnimatedAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedAnnotation.m; sourceTree = "<group>"; };
 		75CBD60B068FD2047FBC4C4E /* Pods-ZhiGua.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhiGua.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhiGua/Pods-ZhiGua.release.xcconfig"; sourceTree = "<group>"; };
 		7BB0195D1D902CD50020776F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		7BB019611D902D380020776F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -590,6 +596,8 @@
 				082214601E0145B800CCF767 /* UserDataMananger.m */,
 				082214611E0145B800CCF767 /* YDBlutoothTool.h */,
 				082214621E0145B800CCF767 /* YDBlutoothTool.m */,
+				08CB54CD1E0FB8E5002F9DCE /* AnimatedAnnotation.h */,
+				08CB54CE1E0FB8E5002F9DCE /* AnimatedAnnotation.m */,
 				0822144C1E0145B800CCF767 /* MPBluetoothKit */,
 				082214631E0145B800CCF767 /* ZGPrinter */,
 			);
@@ -718,6 +726,8 @@
 				0822167E1E0145B900CCF767 /* YDBluetoothConnectModel.m */,
 				0822167F1E0145B900CCF767 /* ZGManagerVC.h */,
 				082216801E0145B900CCF767 /* ZGManagerVC.m */,
+				08167F3D1E0FDE1E0060BB5C /* ZGUserMapVC.h */,
+				08167F3E1E0FDE1E0060BB5C /* ZGUserMapVC.m */,
 			);
 			name = ZGUIModule;
 			path = ZhiGua/ZGUIModule;
@@ -1204,6 +1214,7 @@
 				082218C41E0184B300CCF767 /* MBProgressHUD+Add.m in Sources */,
 				082218CE1E0184B300CCF767 /* MJRefreshAutoStateFooter.m in Sources */,
 				082218C91E0184B300CCF767 /* MJRefreshComponent.m in Sources */,
+				08CB54CF1E0FB8E5002F9DCE /* AnimatedAnnotation.m in Sources */,
 				082218E01E0184B300CCF767 /* SHRefreshControl.m in Sources */,
 				082216B61E0145B900CCF767 /* Graphic.m in Sources */,
 				082216B41E0145B900CCF767 /* ESC.m in Sources */,
@@ -1253,6 +1264,7 @@
 				0822168A1E0145B900CCF767 /* UINavigationBar+Awesome.m in Sources */,
 				082218B61E0184B300CCF767 /* DejalActivityView.m in Sources */,
 				082218E41E0184B300CCF767 /* XMLReader.m in Sources */,
+				08167F3F1E0FDE1E0060BB5C /* ZGUserMapVC.m in Sources */,
 				082216BF1E0145B900CCF767 /* JPLTextArea.m in Sources */,
 				082216871E0145B900CCF767 /* NSString +AES256.m in Sources */,
 				082218C81E0184B300CCF767 /* MJRefreshBackFooter.m in Sources */,
@@ -1411,7 +1423,7 @@
 					"\"${PODS_ROOT}/Headers/Public/MQTTKit\"",
 					"$(PROJECT_DIR)/ZhiGua/lib/Engine",
 					"$(PROJECT_DIR)/ZhiGua/lib/Engine/APIKit",
-					"$(PROJECT_DIR)/Widgets",
+					"$(PROJECT_DIR)/ZGUIModule",
 					"$(PROJECT_DIR)/ZhiGua/PrinterManager/MPBluetoothKit",
 					"$(PROJECT_DIR)/ZhiGua/PrinterManager/ZGPrinter",
 				);
@@ -1456,7 +1468,7 @@
 					"\"${PODS_ROOT}/Headers/Public/MQTTKit\"",
 					"$(PROJECT_DIR)/ZhiGua/lib/Engine",
 					"$(PROJECT_DIR)/ZhiGua/lib/Engine/APIKit",
-					"$(PROJECT_DIR)/Widgets",
+					"$(PROJECT_DIR)/ZGUIModule",
 					"$(PROJECT_DIR)/ZhiGua/PrinterManager/MPBluetoothKit",
 					"$(PROJECT_DIR)/ZhiGua/PrinterManager/ZGPrinter",
 				);

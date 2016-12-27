@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.21</string>
+	<string>1.22</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -32,7 +32,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>1商客需要访问您的相机权限</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>1商客需要在后台运行打印机程序</string>
+	<string>1商客需要在后台运行程序</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>1商客需要访问您的相册权限</string>
 	<key>UIBackgroundModes</key>

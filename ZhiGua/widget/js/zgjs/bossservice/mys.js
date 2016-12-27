@@ -100,3 +100,7 @@ function update_bossInfo_callback(data) {
 function link_printer() {
 	window.location.href = "link_printer";
 }
+
+function show_position(){
+    window.location.href = "show_position";
+}

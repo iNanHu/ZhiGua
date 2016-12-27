@@ -9,6 +9,7 @@
 #import "WJSCommonDefine.h"
 #define kMQTTServerHost @"139.196.154.235"
 #import "ZJLocationService.h"
+#import "UserDataMananger.h"
 #import "PrintService.h"
 #import "YDBlutoothTool.h"
 
@@ -69,19 +70,29 @@
                 NSLog(@"return:%@",grantedQos);
                 
                 RunOnMainThread(
-                    [ZJLocationService statrLocation];
-                    //开启后台定位
-                    [ZJLocationService backgroundForPauseTime:0 locationCounts:5];
-                    
-                    [ZJLocationService sharedModel].lastBlock = ^(CLLocation *location) {
-                        NSLog(@"block backgroundLocation: %f", location.coordinate.latitude);
-                        [ZJLocationService statrLocation];
+                    BOOL bLocation = [ZJLocationService statrLocation];
+                    if (bLocation) {
                         //开启后台定位
-                        [ZJLocationService backgroundForPauseTime:0 locationCounts:100];
-                    };
-                    [ZJLocationService sharedModel].updateBlock = ^(CLLocation *location) {
-                        //NSLog(@"update backgroundLocation: %f", location.coordinate.latitude);
-                    };)
+                        [ZJLocationService backgroundForPauseTime:0 locationCounts:5];
+                        
+                        [ZJLocationService sharedModel].lastBlock = ^(CLLocation *location) {
+                            NSLog(@"block backgroundLocation: %f", location.coordinate.latitude);
+                            [ZJLocationService statrLocation];
+                            //开启后台定位
+                            [ZJLocationService backgroundForPauseTime:0 locationCounts:100];
+                        };
+                        [ZJLocationService sharedModel].updateBlock = ^(CLLocation *location) {
+                            //NSLog(@"update Location: %f,%f", location.coordinate.latitude,location.coordinate.longitude);
+                            //获取当前位置信息
+                            [[UserDataMananger sharedManager]setCurLoaction2D:location.coordinate];
+                            NSInteger iPos = [[ZJLocationService sharedModel] updateRate];
+                            if (iPos++ > 20) {
+                                iPos = 0;
+                                [[ZJLocationService sharedModel]setUpdateRate:iPos];
+                                [[MMPrinterManager shareInstance]reportLatitude:location.coordinate.latitude andLongitude:location.coordinate.longitude];
+                            }
+                        };
+                    })
 
             }];
             _isConnect = YES;

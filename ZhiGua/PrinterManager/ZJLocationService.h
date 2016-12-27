@@ -13,10 +13,12 @@
 
 typedef void (^updateLocationBlock)(CLLocation *);
 
+@property (nonatomic, assign) BOOL isLocation; //是否开启定位
 @property (nonatomic, copy) updateLocationBlock updateBlock;
 @property (nonatomic, copy) updateLocationBlock lastBlock;
+@property (nonatomic, assign) NSInteger updateRate; //多久更新一次
 
-+ (void)statrLocation;
++ (BOOL)statrLocation;
 + (void)stopLocation;
 + (ZJLocationService *)sharedModel;
 

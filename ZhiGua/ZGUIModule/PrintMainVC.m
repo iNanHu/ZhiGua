@@ -105,7 +105,7 @@ NSString *const kPeripheralCellIdentifier = @"kPeripheralCellIdentifier";
 
     NSString *strName = (NSString *)[noti object];
     [self hideProgressViewN];
-    [self showAlertViewWithTitle:[NSString stringWithFormat:@"与%@断开连接",strName]];
+    //[self showAlertViewWithTitle:[NSString stringWithFormat:@"与%@断开连接",strName]];
 }
 
 - (void)showConnectSucc:(NSNotification *)noti {

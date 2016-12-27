@@ -19,7 +19,7 @@ typedef enum
 
 @interface YDBluetoothConnectModel : NSObject
 
-@property (nonatomic, strong) MPPeripheral *peripheral;
+@property (nonatomic, strong) CBPeripheral *peripheral;
 @property (nonatomic, strong) NSString *strBtMacAddr;
 
 @property (nonatomic, assign) YDBluetoothConnectType bluetoothConnectType;

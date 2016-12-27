@@ -7,6 +7,7 @@
 //
 #import <CommonCrypto/CommonDigest.h>
 #import "MMPrinterManager.h"
+#import "YDBlutoothTool.h"
 #import "MyPeripheral.h"
 #import "JQPrinter.h"
 #import "PrinterType.h"
@@ -19,6 +20,9 @@
 #define PRINT_LINE_SPACE 10
 
 @interface MMPrinterManager()
+@property (nonatomic, strong) NSString *strMac;
+@property (nonatomic, strong) NSString *strName;
+@property (nonatomic, assign) NSInteger onlieCount; //设备上线超传计数
 @end
 
 @implementation MMPrinterManager
@@ -87,6 +91,9 @@
     NSString *strRandom = [self ret32bitString];
     NSString *interval = [NSString stringWithFormat:@"%ld000",(long)[[NSDate date] timeIntervalSince1970]];
     NSString *strSig = [self getTokenIdWithNonce:strRandom andTimeStamp:interval];
+    
+    _strName = strBtName;
+    _strMac = strBtMac;
 
     NSLog(@"printStatusOnlineWithBtName: psd %@",strUserPwd);
     
@@ -142,13 +149,25 @@
             NSString *strEqId = [dicEqId objectForKey:@"text"];
             
             [[PrintService shareInstance] initClientModule:strMqttName andPwd:strMqttPsd andMsgId:strEqId andHost:strHost];
+            
+            _onlieCount = 0;
         } else {
             NSLog(@"err: %@",strMsg);
+            if (_onlieCount++ >= 3) {
+                [self printStatusOnlineWithBtName:_strName andBtMac:_strMac];
+            }else {
+                [[YDBlutoothTool sharedBlutoothTool]breakConnect:YES];
+            }
         }
     };
     FailBlock failBlock = ^(id  _Nullable responseObject, NSError * _Nonnull error) {
         
         NSLog(@"error: %@",error);
+        if (_onlieCount++ >= 3) {
+            [self printStatusOnlineWithBtName:_strName andBtMac:_strMac];
+        }else {
+            [[YDBlutoothTool sharedBlutoothTool]breakConnect:YES];
+        }
     };
     
     [[NetManager shareInstance]postMsg:PRINTIN withParams:dicTemp withSuccBlock:sucBlock withFailBlock:failBlock];
@@ -280,5 +299,64 @@
     };
     
     [[NetManager shareInstance]postMsg:PRINTIN withParams:dicTemp withSuccBlock:sucBlock withFailBlock:failBlock];
+}
+
+- (void)reportLatitude:(double)latitude andLongitude:(double)longitude {
+
+    NSString *strUserName = [[UserDataMananger sharedManager] strUserName];
+    NSString *strRoleType = [[UserDataMananger sharedManager] strRoleType];
+    NSMutableString *strUrl = [[NSMutableString alloc]init];
+    if ([strRoleType isEqualToString:@"0"]) { //员工
+        [strUrl appendFormat:@"%@/zgskwechat/WechatEmpMerchantPosition_updateMerchantPosition",SERVADDR];
+    }else {
+        [strUrl appendFormat:@"%@/zgskwechat/WechatBossMerchantPosition_updateMerchantPosition",SERVADDR];
+    }
+    [strUrl appendFormat:@"?position.latitude=%.6f&position.longitude=%.6f&position.userAccount=%@",latitude,longitude,strUserName];
+    
+    SuccBlock sucBlock = ^(id  _Nullable responseObject) {
+        NSError *error;
+        NSDictionary *dicRes = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:&error];
+        if (dicRes) {
+            NSLog(@"reportLatitude responseObject: %@",[dicRes description]);
+            NSString *strCode = [dicRes objectForKey:@"resultCode"];
+            NSString *strResInfo = [dicRes objectForKey:@"resultInfo"];
+            if ([strCode isEqualToString:@"250101"]) {
+                NSLog(@"上传位置信息成功");
+            }else{
+                NSLog(@"上传位置信息失败，%@",strResInfo);
+            }
+        }
+        
+    };
+    FailBlock failBlock = ^(id  _Nullable responseObject, NSError * _Nonnull error) {
+        
+        NSLog(@"error: %@",error);
+    };
+    
+    [[NetManager shareInstance]postMsg:strUrl withParams:nil withSuccBlock:sucBlock withFailBlock:failBlock];
+}
+
+- (void)getUserPostionList {
+    
+    NSString *strRoleType = [[UserDataMananger sharedManager] strRoleType];
+    NSString *strUrl = @"";
+    if ([strRoleType isEqualToString:@"0"]) { //员工
+        strUrl = [NSString stringWithFormat:@"%@/zgskwechat/WechatEmpMerchantPosition_positionList",SERVADDR];
+    }else {
+        strUrl = [NSString stringWithFormat:@"%@/zgskwechat/WechatBossMerchantPosition_positionList",SERVADDR];
+    }
+    
+    SuccBlock sucBlock = ^(id  _Nullable responseObject) {
+        NSArray *dicArr = [NSArray arrayWithArray:responseObject];
+        if (dicArr && dicArr.count) {
+            //NSLog(@"getUserPostionList responseObject: %@",[dicArr description]);
+            RunOnMainThread([[NSNotificationCenter defaultCenter]postNotificationName:@"updateUserMapInfo" object:dicArr];)
+        }
+    };
+    FailBlock failBlock = ^(id  _Nullable responseObject, NSError * _Nonnull error) {
+        
+        NSLog(@"error: %@",error);
+    };
+    [[NetManager shareInstance]getMsg:strUrl andParam:nil withSuccBlock:sucBlock withFailBlock:failBlock];
 }
 @end

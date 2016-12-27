@@ -10,6 +10,7 @@
 #import "APIManager.h"
 #import "WJSCommonDefine.h"
 #import "UserDataMananger.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 #import <UMeng/MobClick.h>
 //#import "JPUSHService.h"
 //#import "ZJLocationService.h"
@@ -38,6 +39,9 @@
     
     //开启友盟统计
     [self umengTrack];
+    
+    //配置高德地图
+    [AMapServices sharedServices].apiKey = GDAPIKey;
     
     [self.window makeKeyAndVisible];
     
@@ -124,10 +128,10 @@
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 //    _isEnterBg = NO;
 //    [ZJLocationService stopLocation];
-    if (_isEnterBg) {
-        _isEnterBg = NO;
-        [[NSNotificationCenter defaultCenter]postNotificationName:AUTOLOGIN object:nil];
-    }
+//    if (_isEnterBg) {
+//        _isEnterBg = NO;
+//        [[NSNotificationCenter defaultCenter]postNotificationName:AUTOLOGIN object:nil];
+//    }
     
 }
 

@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -117,58 +116,23 @@
             </objects>
             <point key="canvasLocation" x="351.5" y="300.5"/>
         </scene>
-        <!--Data Transparent View Controller-->
-        <scene sceneID="twv-M8-hXr">
+        <!--User MapVC-->
+        <scene sceneID="ALb-fF-Dwh">
             <objects>
-                <viewController storyboardIdentifier="DataTransparentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rD0-Bl-6XF" customClass="DataTransparentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ZGUserMapVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qEM-yT-thp" customClass="ZGUserMapVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gSx-Fc-LGf"/>
-                        <viewControllerLayoutGuide type="bottom" id="xCs-fr-a81"/>
+                        <viewControllerLayoutGuide type="top" id="wNA-ze-Mb1"/>
+                        <viewControllerLayoutGuide type="bottom" id="BMG-sc-1Yh"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FH8-q6-B5q">
+                    <view key="view" contentMode="scaleToFill" id="KtF-kp-pgA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rpj-b6-kLQ">
-                                <rect key="frame" x="28" y="56" width="319" height="308"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="308" id="OrA-AF-wkK"/>
-                                </constraints>
-                                <string key="text">我的订单                                                                     客户：高姐               开单员：冯慧华                                          开单时间：2016-07-23 10：14：34                           总金额：470.0                                                              订单总额：35.0                                                          优惠金额：0.0     ------------------------------------------                商品名称    单价    数量    合计                                    111       120.0      1     120.0                                        222     130.0      2     260.0                                          金龙达1222 140.0       1     140.0                     ------------------------------------------              实收：490.0</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLg-oj-8Zl">
-                                <rect key="frame" x="63" y="443" width="250" height="40"/>
-                                <color key="backgroundColor" red="0.10588235294117647" green="0.75294117647058822" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="INF-Zu-J1j"/>
-                                    <constraint firstAttribute="width" constant="250" id="rRo-uL-xcY"/>
-                                </constraints>
-                                <state key="normal" title="打印">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="rpj-b6-kLQ" firstAttribute="top" secondItem="gSx-Fc-LGf" secondAttribute="bottom" constant="36" id="Mhd-cd-3Uj"/>
-                            <constraint firstItem="iLg-oj-8Zl" firstAttribute="centerX" secondItem="FH8-q6-B5q" secondAttribute="centerX" id="RIp-pP-Djk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rpj-b6-kLQ" secondAttribute="trailing" constant="12" id="Zwb-rS-ldI"/>
-                            <constraint firstItem="rpj-b6-kLQ" firstAttribute="leading" secondItem="FH8-q6-B5q" secondAttribute="leadingMargin" constant="12" id="bTr-Jz-ObB"/>
-                            <constraint firstItem="iLg-oj-8Zl" firstAttribute="top" secondItem="rpj-b6-kLQ" secondAttribute="bottom" constant="79" id="xNd-vS-16d"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="QFJ-pZ-d7U"/>
-                    <connections>
-                        <outlet property="printBtn" destination="iLg-oj-8Zl" id="NkP-yK-kaT"/>
-                        <outlet property="printTextView" destination="rpj-b6-kLQ" id="JPl-bj-xGm"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vkf-dM-vLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ova-Di-Zwx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904.5" y="300.5"/>
+            <point key="canvasLocation" x="828" y="301"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

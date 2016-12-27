@@ -20,6 +20,11 @@ typedef void (^YDBlutoothToolContectedFailed) (NSArray *);
 typedef void (^YDBlutoothToolContectedUnlink) (NSArray *);
 
 @interface YDBlutoothTool : NSObject
+{
+    CBUUID *_transServiceUUID;
+    CBUUID *_transTxUUID;
+    CBUUID *_transRxUUID;
+}
 
 // 蓝牙连接列表
 @property (nonatomic, copy) YDBlutoothToolContectedList blutoothToolContectedList;
@@ -37,7 +42,14 @@ typedef void (^YDBlutoothToolContectedUnlink) (NSArray *);
 @property (nonatomic, strong) NSMutableArray *peripheralsArray;
 
 // 当前设备
-@property (nonatomic, strong) MPPeripheral *currentPeripheral;
+@property (nonatomic, strong) CBPeripheral *currentPeripheral;
+
+@property(retain) CBCharacteristic *serialNumberChar;
+@property(retain) CBCharacteristic *airPatchChar;
+@property(retain) CBCharacteristic *serialNumDataReadChar;
+@property(retain) CBCharacteristic *transparentDataWriteChar;
+@property(retain) CBCharacteristic *transparentDataReadChar;
+@property(retain) CBCharacteristic *connectionParameterChar;
 
 //当前设备的mac地址
 @property (nonatomic,strong) NSString *strMacAddr;
@@ -89,6 +101,4 @@ typedef void (^YDBlutoothToolContectedUnlink) (NSArray *);
 - (void)updateBlueToothArray;
 
 - (BOOL)JQprintGetStatue;
-
-- (void)feedLines;
 @end
