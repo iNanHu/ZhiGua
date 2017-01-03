@@ -5,7 +5,7 @@
 //  Created by alexyang on 2016/12/25.
 //  Copyright © 2016年 com.iNanhu. All rights reserved.
 //
-
+#import "WGS84TOGCJ02.h"
 #import "ZGUserMapVC.h"
 #import "ZJLocationService.h"
 #import "AnimatedAnnotation.h"
@@ -41,7 +41,6 @@
     [self startLocation];
     CLLocationCoordinate2D curLocation = [[UserDataMananger sharedManager] curLoaction2D];
     _mapView.centerCoordinate = curLocation;
-    
 }
 
 - (void)startLocation {
@@ -59,18 +58,26 @@
         };
         [ZJLocationService sharedModel].updateBlock = ^(CLLocation *location) {
             //NSLog(@"update Location: %f,%f", location.coordinate.latitude,location.coordinate.longitude);
+            CLLocationCoordinate2D curLocation;
+            //判断是不是属于国内范围
+            if ([WGS84TOGCJ02 isLocationOutOfChina:location.coordinate]) {
+                return ;
+            }
+            //转换后的coord
+            curLocation = [WGS84TOGCJ02 transformFromWGSToGCJ:location.coordinate];
+            
             //获取当前位置信息
             CLLocationCoordinate2D lasLocation2D = [[UserDataMananger sharedManager] curLoaction2D];
             if (lasLocation2D.longitude == 0 && lasLocation2D.latitude == 0) {
-                _mapView.centerCoordinate = location.coordinate;
+                _mapView.centerCoordinate = curLocation;
                 [[MMPrinterManager shareInstance]getUserPostionList];
             }
-            [[UserDataMananger sharedManager]setCurLoaction2D:location.coordinate];
+            [[UserDataMananger sharedManager]setCurLoaction2D:curLocation];
             NSInteger iPos = [[ZJLocationService sharedModel] updateRate];
-            if (iPos++ > 20) {
-                iPos = 0;
-                [[MMPrinterManager shareInstance]reportLatitude:location.coordinate.latitude andLongitude:location.coordinate.longitude];
-                 [[MMPrinterManager shareInstance]getUserPostionList];
+            if (iPos++ == 0 || iPos >= 20) {
+                iPos = iPos%20;
+                [[MMPrinterManager shareInstance]reportLatitude:curLocation.latitude andLongitude:curLocation.longitude];
+                [[MMPrinterManager shareInstance]getUserPostionList];
             }
             [[ZJLocationService sharedModel]setUpdateRate:iPos];
         };
@@ -115,31 +122,48 @@
 {
     MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
     pointAnnotation.coordinate = coordinate;
-    pointAnnotation.title = @"我的打印机";
+    pointAnnotation.title = @"1商客用户";
     pointAnnotation.subtitle = @"";
     [self.arrAniotation addObject:pointAnnotation];
     [_mapView addAnnotation:pointAnnotation];
 }
 
-- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
+- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation
 {
     if ([annotation isKindOfClass:[MAPointAnnotation class]])
     {
-        static NSString *reuseIndetifier = @"annotationReuseIndetifier";
-        MAAnnotationView *annotationView = (MAAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+        static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
+        MAPinAnnotationView*annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
         if (annotationView == nil)
         {
-            annotationView = [[MAAnnotationView alloc] initWithAnnotation:annotation
-                                                          reuseIdentifier:reuseIndetifier];
+            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
         }
-        annotationView.image = [UIImage imageNamed:@"icon_printer"];
         annotationView.canShowCallout= YES;       //设置气泡可以弹出，默认为NO
-        //设置中心点偏移，使得标注底部中间点成为经纬度对应点
-        annotationView.centerOffset = CGPointMake(0, -18);
+        annotationView.animatesDrop = YES;        //设置标注动画显示，默认为NO
+        annotationView.pinColor = MAPinAnnotationColorRed;
         return annotationView;
     }
     return nil;
 }
+//- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
+//{
+//    if ([annotation isKindOfClass:[MAPointAnnotation class]])
+//    {
+//        static NSString *reuseIndetifier = @"annotationReuseIndetifier";
+//        MAAnnotationView *annotationView = (MAAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+//        if (annotationView == nil)
+//        {
+//            annotationView = [[MAAnnotationView alloc] initWithAnnotation:annotation
+//                                                          reuseIdentifier:reuseIndetifier];
+//        }
+//        annotationView.image = [UIImage imageNamed:@"icon_printer"];
+//        annotationView.canShowCallout= YES;       //设置气泡可以弹出，默认为NO
+//        //设置中心点偏移，使得标注底部中间点成为经纬度对应点
+//        annotationView.centerOffset = CGPointMake(0, -18);
+//        return annotationView;
+//    }
+//    return nil;
+//}
 
 - (NSMutableArray *)arrAniotation {
     

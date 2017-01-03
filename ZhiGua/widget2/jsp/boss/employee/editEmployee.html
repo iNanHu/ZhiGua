@@ -1,0 +1,91 @@
+<div class="tobar-z ml ban_move">
+</div>
+<div id="edit_employee_box" class="wrapper b0">
+    <div class="scroller">
+        <ul class="clients-full-li arrow setting">
+            <li class="o_win" data-load="_update_employee_photo">
+                <div class="w100 ew">
+                    <span class="w7e">客户头像<span class="sm co-warn">(选填)</span></span>
+                    <span class="ar">
+                        <i id="update_employee_photo_img" class="add-clients-img" style="background-image: url(imgs/logo.png);"></i>
+                        <input type="hidden" id="update_employee_photo">
+                    </span>
+                </div>
+            </li>
+        </ul>
+        <ul class="clients-full-li">
+            <li>
+                <div class="w100 ew">
+                    <span class="w7e">员工编号</span>
+                    <em class="nl1e ar co-back" id="update_employee_id"></em>
+                </div>
+            </li>
+        </ul>        
+        <ul class="clients-full-li arrow setting">
+            <li class="o_win" data-load="_update_employee_name">
+                <div class="w100 ew">
+                    <span class="w7e">员工名称</span>
+                    <em class="nl1e ar co-back" id="update_employee_name"></em>
+                </div>
+            </li>
+            <li class="o_win" data-load="_update_employee_shop">
+                <div class="w100 ew">
+                    <span class="w7e">所属门店</span>
+                    <em class="nl1e ar co-back" id="update_employee_shopName"></em>
+                    <input type="hidden" id="update_employee_shopCode">
+                </div>
+            </li>            
+            <li class="o_win" data-load="_update_employee_phone">
+                <div class="w100 ew">
+                    <span class="w7e">手机号码</span>
+                    <em class="nl1e ar co-back" id="update_employee_phone"></em>
+                </div>
+            </li>            
+            <li class="o_win" data-load="_update_employee_pwd">
+                <div class="w100 ew">
+                    <span class="w7e">密码</span>
+                    <em class="nl1e ar co-back" id="update_employee_pwd"></em>
+                </div>
+            </li>
+            <li class="o_win" data-load="_update_employee_sex">
+                <div class="w100 ew">
+                    <span class="w7e">性别</span>
+                    <em class="nl1e ar co-back" id="update_employee_sex_span"></em>
+                    <input id="update_employee_sex" type="hidden">
+                </div>
+            </li>               
+        </ul>
+        <ul class="clients-full-li setting">
+            <li class="o_win" data-load="_update_employee_address">
+                <div class="w100 ew">
+                    <span class="w7e">地址</span>
+                    <em class="icon icon-map-m ar co-back ll nr15x"></em>
+                </div>
+            </li>
+            <li class="co-back" id="update_employee_address"></li>
+        </ul>
+        <ul class="clients-full-li setting">
+            <li class="o_win" data-load="_update_employee_remarks">
+                <div class="w100 ew">
+                    <span class="w7e">备注<span class="sm co-warn">(选填)</span></span>
+                    <em class="icon icon-bi-m ar co-back ll nr15x"></em>
+                </div>
+            </li>
+            <li class="co-back" id="update_employee_remarks"></li>
+        </ul>
+        <div class="n20x mb10x">
+            <div class="x_win mo-btn w100 mo-l" data-co="main" onclick="update_employee()">保存</div>
+        </div>
+    </div>
+</div>
+<script>
+edit_employee_box = new IScroll('#edit_employee_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

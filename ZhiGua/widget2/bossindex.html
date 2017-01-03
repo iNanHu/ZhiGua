@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html data-sz="s">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=0.5, minimum-scale=0.5,maximum-scale=0.5, user-scalable=no">
+    <meta name="description" content="zhigua">
+    <meta name="author" content="Junbo">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        @-webkit-keyframes am-start {0% {-webkit-transform: translate3d(0, 30%, 0);} 70% {-webkit-transform: translate3d(0, 19%, 0);} 100% {-webkit-transform: translate3d(0, 20%, 0);} }
+        @keyframes am-start {0% {transform: translate3d(0, 30%, 0);} 70% {transform: translate3d(0, 19%, 0);} 100% {transform: translate3d(0, 20%, 0);} }
+        .mo-start {display: none;z-index: 99999;position: absolute;margin: auto;top: 0;bottom: 0;width: 100%;background: #fff}
+        .mo-start.open {display: block}
+        .mo-start .start-logo {width:100%;padding-top: 100%;background: url(data:image/png;base64,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) no-repeat center;-webkit-transform: translate3d(0, 30%, 0);transform: translate3d(0, 30%, 0);-webkit-animation: am-start 0.8s ease forwards;animation: am-start 0.8s ease forwards;}
+        .mo-start #start-info {width:100%;font-size:24px;position: absolute;bottom:8%;text-align: center;color:#fff;-webkit-transition:all .5s;transition:all .5s;}
+    </style>
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css"> 
+    <link rel="stylesheet" href="css/boss/boss.css">
+    <link rel="stylesheet" href="icon/icon.css">
+    <link rel="stylesheet" href="css/moui.css">
+    <link rel="stylesheet" href="css/boss/color.css">
+    <link rel="stylesheet" href="css/photo.css">
+    <title>1商客</title>
+</head>
+<body>
+<div id="start" class="mo-start open stopmove">
+    <div class="start-logo"></div>
+    <p id="start-info">正在载入，请稍后</p>
+</div>
+<script>
+    var start = document.getElementById('start');
+    start.addEventListener('touchstart', function (e) {
+        e.preventDefault();
+    });
+    start.addEventListener('touchmove', function (e) {
+        e.preventDefault();
+    });
+    setTimeout(function () {
+        var startInfo = document.getElementById('start-info');
+        startInfo.style.color='#999';
+    },1500)
+</script>
+<div id="win1" class="win win-open" data-win="1">
+    <div id="win1-box" class="win-box">
+        <div id="win1_box" class="wrapper">
+            <div class="scroller">
+            </div>
+        </div>
+    </div>
+    <div class="loading ban_move"></div>
+    <ul id="footer" class="fobar ban_move">
+        <li class="o_main active" data-load="home">
+            <i class="icon icon-home"></i>
+            <p>首页</p>
+        </li>
+        <li class="o_main" data-load='_commodity'>
+            <i class="icon icon-goods"></i>
+            <p>商品</p>
+        </li>
+        <!--中间菜单呼出键，暂时关闭，如果需要。请把下面一行替换成<li id="fo_menu" class="menu">-->
+        <li id="o_win" class="menu" data-load="_pr_order">
+            <i id="o_menu" class="icon icon-bi-m bg-main"></i>
+            <!--如果这里是呼出菜单，则把这行显示出来-->
+            <!--<i id="x_menu" class="icon icon-close-m bg-warn"></i>-->
+        </li>
+        <li class="o_main" data-load='_message'>
+            <i class="icon icon-message"></i>
+            <div id="noReadMessageCount">
+            </div>
+            <p>消息</p>
+        </li>
+        <li class="o_main" data-load='_boss_info'>
+            <i class="icon icon-user"></i>
+            <p>我的</p>
+        </li>
+    </ul>
+</div>
+<div id="win2" class="win" data-win="2">
+    <div class="tobar ml ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m"><span>返回</span></em>
+            <p id="win2_title" class="page_title ls"></p>
+        </div>
+    </div>
+    <div id="win2-box" class="win-box">
+        <div id="win2_box" class="wrapper">
+            <div class="scroller">
+            </div>
+        </div>
+    </div>
+    <div class="loading ban_move"></div>
+</div>
+<div id="win3" class="win" data-win="3">
+    <div class="tobar ml ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m"><span>返回</span></em>
+            <em class="x_all_win mo-back icon icon-close-m al n0"></em>
+            <p id="win3_title" class="page_title ls"></p>
+        </div>
+    </div>
+    <div id="win3-box" class="win-box">
+        <div id="win3_box" class="wrapper">
+            <div class="scroller">
+            </div>
+        </div>
+    </div>
+    <div class="loading ban_move"></div>
+</div>
+<div id="win4" class="win" data-win="4">
+    <div class="tobar ml ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m"><span>返回</span></em>
+            <em class="x_all_win mo-back icon icon-close-m al n0"></em>
+            <p id="win4_title" class="page_title ls"></p>
+        </div>
+    </div>
+    <div id="win4-box" class="win-box">
+        <div id="win4_box" class="wrapper">
+            <div class="scroller">
+            </div>
+        </div>
+    </div>
+    <div class="loading ban_move"></div>
+</div>
+<div id="win5" class="win" data-win="5">
+    <div class="tobar ml ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m"><span>返回</span></em>
+            <em class="x_all_win mo-back icon icon-close-m al n0"></em>
+            <p id="win5_title" class="page_title ls"></p>
+        </div>
+    </div>
+    <div id="win5-box" class="win-box">
+        <div id="win5_box" class="wrapper">
+            <div class="scroller">
+            </div>
+        </div>
+    </div>
+    <div class="loading ban_move"></div>
+</div>
+<div id="win6" class="win" data-win="6">
+    <div class="tobar ml ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m"><span>返回</span></em>
+            <em class="x_all_win mo-back icon icon-close-m al n0"></em>
+            <p id="win6_title" class="page_title ls"></p>
+        </div>
+    </div>
+    <div id="win6-box" class="win-box">
+        <div id="win6_box" class="wrapper">
+            <div class="scroller">
+            </div>
+        </div>
+    </div>
+    <div class="loading ban_move"></div>
+</div>
+<div id="win7" class="win" data-win="7">
+    <div class="tobar ml ban_move">
+        <div class="tonav">
+            <em class="x_win mo-back icon icon-left-m"><span>返回</span></em>
+            <em class="x_all_win mo-back icon icon-close-m al n0"></em>
+            <p id="win7_title" class="page_title ls"></p>
+        </div>
+    </div>
+    <div id="win7-box" class="win-box">
+        <div id="win7_box" class="wrapper">
+            <div class="scroller">
+            </div>
+        </div>
+    </div>
+    <div class="loading ban_move"></div>
+</div>
+<div class="win-search">
+    <div class="search-bar w100 h3e5 ban_move">
+                <span class="mo-search mh20x">
+                    <input id="search-input" class="o_key sm" data-key-type="abc" type="text" placeholder="搜索" readonly>
+                    <span class="icon icon-search"></span>
+                </span>
+        <em class="x_search mo-tonav ac fr pa t0 ms nw10x ml tonav-edit" data-win="win2">取消</em>
+    </div>
+    <div class="x_search search-mubu"></div>
+    <div id="search_box" class="wrapper b0">
+        <div class="scroller">
+            <!--<ul class="user_keywords user-li arrow">-->
+            <!--<li>商品名1</li>-->
+            <!--<li>商品名2</li>-->
+            <!--</ul>-->
+            <!--<p class="clear_keywords v1e5 ac mt15x ss co-back">共0条记录</p>-->
+        </div>
+    </div>
+</div>
+<div class="mo-msg"></div>
+<div class="mo-key-123 ban_move">
+    <table>
+        <thead>
+        <tr>
+            <th colspan="4" class="x_key_123"><i class="icon icon-bottom ms"></i></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="key" data-key="7"><em>7</em></td>
+            <td class="key" data-key="8"><em>8</em></td>
+            <td class="key" data-key="9"><em>9</em></td>
+            <td class="key_plus"><em><i class="icon icon-plus-m"></i></em></td>
+        </tr>
+        <tr>
+            <td class="key" data-key="4"><em>4</em></td>
+            <td class="key" data-key="5"><em>5</em></td>
+            <td class="key" data-key="6"><em>6</em></td>
+            <td class="key_minus"><em><i class="icon icon-minus-m"></i></em></td>
+        </tr>
+        <tr>
+            <td class="key" data-key="1"><em>1</em></td>
+            <td class="key" data-key="2"><em>2</em></td>
+            <td class="key" data-key="3"><em>3</em></td>
+            <td class="key_del"><em><i class="icon icon-del-m"></i></em></td>
+        </tr>
+        <tr>
+            <td class="key_reset"><em><i class="icon icon-refresh-m"></i></em></td>
+            <td class="key" data-key="0"><em>0</em></td>
+            <td class="key" data-key="."><em><i class="icon icon-dian"></i></em></td>
+            <td class="key_btn"><b class="key_next mm">Tab</b><b class="key_end mm">完成</b></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="mo-key-abc ban_move">
+    <table>
+        <thead>
+        <tr>
+            <th colspan="8" class="x_key_abc"><i class="icon icon-bottom sm co-back"></i></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="key" data-key="Q"><em>Q</em></td>
+            <td class="key" data-key="W"><em>W</em></td>
+            <td class="key" data-key="E"><em>E</em></td>
+            <td class="key" data-key="R"><em>R</em></td>
+            <td class="key" data-key="T"><em>T</em></td>
+            <td class="key" data-key="Y"><em>Y</em></td>
+            <td class="key" data-key="P"><em>P</em></td>
+            <td class="key" data-key="L"><em>L</em></td>
+        </tr>
+        <tr>
+            <td class="key" data-key="A"><em>A</em></td>
+            <td class="key" data-key="S"><em>S</em></td>
+            <td class="key" data-key="D"><em>D</em></td>
+            <td class="key" data-key="F"><em>F</em></td>
+            <td class="key" data-key="G"><em>G</em></td>
+            <td class="key" data-key="H"><em>H</em></td>
+            <td class="key" data-key="J"><em>J</em></td>
+            <td class="key" data-key="K"><em>K</em></td>
+        </tr>
+        <tr>
+            <td class="key" data-key="Z"><em>Z</em></td>
+            <td class="key" data-key="X"><em>X</em></td>
+            <td class="key" data-key="C"><em>C</em></td>
+            <td class="key" data-key="B"><em>B</em></td>
+            <td class="key" data-key="N"><em>N</em></td>
+            <td class="key" data-key="M"><em>M</em></td>
+            <td colspan="2" class="key_del"><em><i class="icon icon-del-m lm"></i></em></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="key_reset"><em>123</em></td>
+            <td class="key" data-key="U"><em>U</em></td>
+            <td class="key" data-key="I"><em>I</em></td>
+            <td class="key" data-key="O"><em>O</em></td>
+            <td class="key" data-key="V"><em>V</em></td>
+            <td colspan="2" class="key_btn"><b class="key_next mm">Tab</b><b class="key_end mm">完成</b></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id="csinput" style="width:1px; height:1px; overflow: hidden; position:fixed; top:0; left:0;"></div>
+<div id="floater" class="">
+    <div class="mo-popup m-col-8 h35e wc hc">
+        <div class="popup_title">
+            <h5 class="fl">标题</h5>
+            <i class="x_popup mc-close icon icon-close fr mm"></i>
+        </div>
+        <div class="popup_content">
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!--基础-->
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/iscroll-probe.js"></script>
+<script src="js/echarts.min.js"></script>
+<!--交互-->
+<script src="js/main.js"></script>
+<script src="js/api.js"></script>
+<script src="js/bosspage.js"></script>
+<!--数据-->
+<script src="js/zgjs/common.js"></script>
+<script src="js/zgjs/bossservice.js"></script>
+<script src="js/zgjs/bossindex.js"></script>
+<!--上传图片-->
+<script src="js/photo/iscroll-zoom.js"></script>
+<script src="js/photo/hammer.js"></script>
+<script src="js/photo/lrz.all.bundle.js"></script>
+<script src="js/photo/PhotoClip.min.js"></script>
+<script>
+    win1_box = new IScroll('#win1_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true,
+        deceleration:0.0015
+    });
+    win2_box = new IScroll('#win2_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true,
+        deceleration:0.0015
+    });
+    win3_box = new IScroll('#win3_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true,
+        deceleration:0.0015
+    });
+    win4_box = new IScroll('#win4_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true,
+        deceleration:0.0015
+    });
+    win5_box = new IScroll('#win5_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true,
+        deceleration:0.0015
+    });
+    win6_box = new IScroll('#win6_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true,
+        deceleration:0.0015
+    });
+    win7_box = new IScroll('#win7_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true,
+        deceleration:0.0015
+    });
+    search_box = new IScroll('#search_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        bindToWrapper: true,
+        deceleration:0.0015
+    });
+
+//    启动页关闭
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('#start').removeClass('open');
+        }, 2000)
+    });
+    setTimeout(function () {
+        $('#start').removeClass('open');
+    }, 5000)
+</script>
+</body>
+</html>

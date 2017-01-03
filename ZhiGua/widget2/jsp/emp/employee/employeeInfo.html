@@ -1,0 +1,53 @@
+<div id="user_box" class="wrapper hide-bar user-middbg" style="top:0">
+    <div class="scroller fullbg fullbg-main">
+        <div class="tobar tm mm">
+            <div class="tonav">
+                <!--<em id="back-main" class="icon icon-setting-on ml"></em>-->
+                <p class="page_title ml"></p>
+                <!--<i onclick="win4_load('settings')" class="icon icon-setting-on fr pr ml"></i>-->
+            </div>
+        </div>
+        <div class="user-header">
+            <div class=user-bg></div>
+            <div class="user-img" id="det_employee_photo_img" style="background-image: url(imgs/logo.png)"></div>
+            <p class="user-name ac co-white mm" id="det_employee_Name"></p>
+            <p class="shop-name ac co-white mm"><span class="sm" id="det_shop_name"></span></p>
+            <ul class="user-info ew w100 ac">
+                <li class="o_win" data-load="_employee_order">
+                    <h5 id="order_count">0</h5>
+                    <p>订单</p>
+                </li>
+                <li>
+                    <h5 id="order_sales">0</h5>
+                    <p>销售额</p>
+                </li>
+                <li onclick="add_employee_sign()">
+                    <h5 id="employee_sign">0</h5>
+                    <p id="employee_sign_info">签到</p>
+                </li>
+            </ul>
+        </div>
+        <ul class="user-li arrow">
+            <li class="o_win" data-load="_employee_setting"><i class="icon icon-user-on co1"></i><span>帐号设置</span></li>
+            <li class="o_win" data-load="_work_notes"><i class="icon icon-edit-order co2"></i><span>工作笔记</span></li>
+            <li id="link_printer" onclick="link_printer()"><i class="icon icon-tools co5"></i><span>连接打印设备</span></li>
+        </ul>
+        <ul class="user-li arrow">
+            <li class="o_win" data-load="_system_setting"><i class="icon icon-setting-on co3"></i><span>系统设置</span></li>
+            <li class="o_win" data-load="_feedback"><i class="icon icon-email-on co4"></i><span>使用反馈</span></li>
+            <li class="o_win" data-load="_aboutus"><i class="icon icon-aboutus-on co6"></i><span>关于我们</span></li>
+        </ul>
+        <div id="exit_login" class="n20x mb10x">
+            <div class="mo-btn w100 mo-l" data-co="warn" onclick="exit(0)">退出</div>
+        </div>
+    </div>
+</div>
+<script>
+user_box = new IScroll('#user_box', {
+    probeType: 3,
+    mouseWheel: true,
+    click: true,
+    bindToWrapper: true
+});
+</script>
+

@@ -7,6 +7,7 @@
 //
 #import "MMPrinterManager.h"
 #import "WJSCommonDefine.h"
+#import "WGS84TOGCJ02.h"
 #define kMQTTServerHost @"139.196.154.235"
 #import "ZJLocationService.h"
 #import "UserDataMananger.h"
@@ -83,14 +84,22 @@
                         };
                         [ZJLocationService sharedModel].updateBlock = ^(CLLocation *location) {
                             //NSLog(@"update Location: %f,%f", location.coordinate.latitude,location.coordinate.longitude);
-                            //获取当前位置信息
-                            [[UserDataMananger sharedManager]setCurLoaction2D:location.coordinate];
-                            NSInteger iPos = [[ZJLocationService sharedModel] updateRate];
-                            if (iPos++ > 20) {
-                                iPos = 0;
-                                [[ZJLocationService sharedModel]setUpdateRate:iPos];
-                                [[MMPrinterManager shareInstance]reportLatitude:location.coordinate.latitude andLongitude:location.coordinate.longitude];
+                            CLLocationCoordinate2D curLocation;
+                            //判断是不是属于国内范围
+                            if ([WGS84TOGCJ02 isLocationOutOfChina:location.coordinate]) {
+                                return ;
                             }
+                            //转换后的coord
+                            curLocation = [WGS84TOGCJ02 transformFromWGSToGCJ:location.coordinate];
+                            //获取当前位置信息
+                            [[UserDataMananger sharedManager]setCurLoaction2D:curLocation];
+                            NSInteger iPos = [[ZJLocationService sharedModel] updateRate];
+                            if (iPos++ == 0 || iPos >= 20) {
+                                iPos = iPos%20;
+                                [[MMPrinterManager shareInstance]reportLatitude:curLocation.latitude andLongitude:curLocation.longitude];
+                                [[MMPrinterManager shareInstance]getUserPostionList];
+                            }
+                            [[ZJLocationService sharedModel]setUpdateRate:iPos];
                         };
                     })
 

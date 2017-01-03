@@ -253,10 +253,10 @@ li#mo-menu5 div .icon{width:4.5rem; height:4.5rem; line-height: 4.5rem; font-siz
 .scroller.fullbg-main:before {background: #1bc0ff;}
 .scroller.fullbg-vice:before {background: #ff9900;}
 .scroller.fullbg-white:before {background: #fff;}
-.home-header,.user-header{width:100%; min-height: 16.5rem;position:relative;overflow:hidden}
+.home-header,.user-header{width:100%; min-height: 15.5rem;position:relative;overflow:hidden}
 .home-header{min-height: 18rem;}
-.home-bg,.user-bg{position:absolute;width:100%;height:16.5rem;left:0;top:0;margin:auto;background:#1bc0ff;background-size:cover;}
-.home-bg{color:#fff;text-align:center;padding:3.5rem 20px 2.5rem 20px;}
+.home-bg,.user-bg{position:absolute;width:100%;height:15.5rem;left:0;top:0;margin:auto;background:#1bc0ff;background-size:cover;}
+.home-bg{color:#fff;text-align:center;padding:3.5rem 20px 0 20px;}
 .user-middbg:before{display: block; content:""; width:100%; height:500%; background:#ffd002;position: absolute; bottom:100%;left:0;}
 .user-img{width:5.5rem;height:5.5rem;background:#fff; background-repeat:no-repeat;background-position:center; background-size:cover;border-radius:100em;position:absolute;top:12%;left:0;right:0;margin:auto}
 .user-name,.shop-name{width:100%;height:1.5em;position:absolute;top:20%;margin-top:5em}
@@ -472,7 +472,10 @@ li#mo-menu5 div .icon{width:4.5rem; height:4.5rem; line-height: 4.5rem; font-siz
 #dpWrapper {background: #fff;}
 
 .input-full{width:100%;height:3.5rem;position:relative;}
-.input-full input{width:100%;height:100%;padding:1rem;line-height:1.5rem;position:absolute; left:0; top:0;}
+.input-full>input{width:100%;height:100%;padding:1rem;line-height:1.5rem;position:absolute; left:0; top:0;}
+.input-full>input:focus{border-color:#1bc0ff;}
+.input-full>input:focus,
+.input-full>input:focus::-webkit-input-placeholder {color:#19b4ff}
 .amap-marker-label{font-size: 20px !important; padding: 0.3rem; border: 1px solid #ff5049; border-radius: 0.1rem; color: #ff5049;}
 
 .no-goods .icon-basket {width: 6rem; height: 6rem; line-height: 6rem; display: inline-block; margin-top:2rem; background: rgba(0,0,0,.05); border-radius: 50%; color: rgba(0,0,0,.2);}

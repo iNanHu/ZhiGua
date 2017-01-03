@@ -6,7 +6,6 @@
 //  Copyright © 2016年 long1009. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-#import "MPBluetoothKit.h"
 #import "YDBluetoothConnectModel.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <UIKit/UIKit.h>

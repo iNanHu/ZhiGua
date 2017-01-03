@@ -1,5 +1,14 @@
+var oWin_index=1;
+
+function setAppWindowIndex(){
+    //window.appFunc.setWindowIndex(oWin_index);
+}
+
 /*打开子页面*/
 function openWin($this, oWin) {
+	oWin_index = oWin;
+	setAppWindowIndex();
+	console.log('当前页面oWin_index=' + oWin_index);
     $('*').blur();
     xKeyABC();
     xKey123();
@@ -26,6 +35,8 @@ function openWin($this, oWin) {
 
 /*关闭页面*/
 function closeWin(oWin) {
+	oWin_index = oWin-1;
+	console.log('当前页面oWin_index=' + oWin_index);
     xKeyABC();
     xKey123();
     var oLoadWin = $('#win' + oWin), oLoadBox = $('#win' + oWin + '-box'), oLoadTitle = $('#win' + oWin + '_title');
@@ -33,7 +44,7 @@ function closeWin(oWin) {
     setTimeout(function() {
         oLoadWin.css('display','none');
     }, 500);
-
+    setAppWindowIndex();
     /*清空容器*/
     setTimeout(function () {
         oLoadTitle.text('');
@@ -42,7 +53,14 @@ function closeWin(oWin) {
 }
 
 /*关闭页面*/
+function close_win(){
+	closeWin(oWin_index);
+}
+
+
+/*关闭页面*/
 function closeAllWin() {
+	oWin_index=1;
     xKeyABC();
     xKey123();
     $('#win2,#win3,#win4,#win5,#win6,#win7').removeClass('win-open');

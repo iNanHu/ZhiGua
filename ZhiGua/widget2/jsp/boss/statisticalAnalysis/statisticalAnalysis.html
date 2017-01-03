@@ -1,0 +1,24 @@
+<div class="tobar-z ml ban_move">
+	<div class="tonav">
+        <p class="page_title ls">统计分析</p>
+    </div>
+</div>
+<div id="statisticalAnalysis_box" class="wrapper b0">
+    <div class="scroller">
+        <ul class="user-li arrow">
+            <li class="o_win" data-load="_off_line"><i class="icon icon-user-on co1"></i><span>商户经营统计图</span></li>
+            <li class="o_win" data-load="_off_line"><i class="icon icon-news-on co4"></i><span>库存统计图</span></li>
+            <li class="o_win" data-load="_off_line"><i class="icon icon-setting-on co3"></i><span>销售额统计图</span></li>
+            <li class="o_win" data-load="_off_line"><i class="icon icon-email-on co4"></i><span>客户交易统计图</span></li>
+        </ul>
+    </div>
+</div>
+<script>
+statisticalAnalysis_box = new IScroll('#statisticalAnalysis_box', {
+    probeType: 3,
+    mouseWheel: true,
+    click: true,
+    bindToWrapper: true
+});
+</script>
+

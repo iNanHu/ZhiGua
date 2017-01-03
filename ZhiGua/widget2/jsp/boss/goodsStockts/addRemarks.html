@@ -1,0 +1,27 @@
+<div class="tobar-z mm ban_move">
+    <div class="tonav">
+    </div>
+</div>
+<div id="add_commodity_remarks_box" class="wrapper">
+    <div class="scroller">
+    	<div class="n20x">
+            <div class="mo-textarea">
+                <textarea id="m_gsts_add_remarks" class="w100" rows="5"></textarea>
+           	</div>
+        </div>
+    	<div class="n20x mb10x">
+        	<div class="x_win mo-btn w100 mo-l" data-co="main" onclick="gsts_add_remarks()">确认</div>
+    	</div>          
+    </div>
+</div>
+<script>
+add_commodity_remarks_box = new IScroll('#add_commodity_remarks_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

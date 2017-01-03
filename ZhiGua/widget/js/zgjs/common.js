@@ -1,4 +1,4 @@
-var webServer_url = "http://www.zhinengshagua.com/zgskwechat/";//"http://www.zhiguait.com/zgskwechat/";
+var webServer_url = "http://www.zhiguait.com/zgskwechat/";
 //function init_url(url) {
 //	webServer_url = url;
 //}
@@ -93,13 +93,16 @@ function refresh_node(id) {
  */
 function validator_name(title, name, minSize, maxSize) {
 	if (name == "") {
-		alert(title + "不能为空!");
+		window.wxc.xcConfirm(title + "不能为空!", "info", null);
+//		alert(title + "不能为空!");
 		return false;
 	} else if (!/^[\u4e00-\u9fa5_a-zA-Z]+$/.test(name)) {
-		alert(title + "只能为中文或英文组成!");
+		window.wxc.xcConfirm(title + "只能为中文或英文组成!", "info", null);
+//		alert(title + "只能为中文或英文组成!");
 		return false;
 	} else if (name.length < minSize || name.length > maxSize) {
-		alert(title + "长度只能为" + minSize + "-" + maxSize + "个字符!");
+		window.wxc.xcConfirm(title + "长度只能为" + minSize + "-" + maxSize + "个字符!", "info", null);
+//		alert(title + "长度只能为" + minSize + "-" + maxSize + "个字符!");
 		return false;
 	} else {
 		return true;
@@ -118,13 +121,16 @@ function validator_name(title, name, minSize, maxSize) {
  */
 function validator_account(title, account, minSize, maxSize) {
 	if (account == "") {
-		alert(title + "不能为空!");
+		window.wxc.xcConfirm(title + "不能为空!", "info", null);
+//		alert(title + "不能为空!");
 		return false;
-	} else if (!/^[\u4E00-\u9FA5a-zA-Z0-9_]+$/.test(account)) {
-		alert(title + "只能是数字、字母、下划线构成!");
+	} else if (!/^[\u4E00-\u9FA5a-zA-Z0-9]+$/.test(account)) {
+		window.wxc.xcConfirm(title + "只能是数字、字母!", "info", null);
+//		alert(title + "只能是数字、字母、下划线构成!");
 		return false;
 	} else if (account.length < minSize || account.length > maxSize) {
-		alert(title + "长度只能为" + minSize + "-" + maxSize + "个字符!");
+		window.wxc.xcConfirm(title + "长度只能为" + minSize + "-" + maxSize + "个字符!", "info", null);
+//		alert(title + "长度只能为" + minSize + "-" + maxSize + "个字符!");
 		return false;
 	} else {
 		return true;
@@ -141,10 +147,12 @@ function validator_account(title, account, minSize, maxSize) {
  */
 function validator_phone(title, phone) {
 	if (phone == "") {
-		alert(title + "不能为空!");
+		window.wxc.xcConfirm(title + "不能为空!", "info", null);
+//		alert(title + "不能为空!");
 		return false;
 	} else if (!/^(13|15|18)\d{9}$/.test(phone)) {
-		alert(title + "格式不正确!");
+		window.wxc.xcConfirm(title + "格式不正确!", "info", null);
+//		alert(title + "格式不正确!");
 		return false;
 	} else {
 		return true;
@@ -160,16 +168,20 @@ function validator_phone(title, phone) {
  */
 function validator_password(title, password, repeat_password) {
 	if (password == "") {
-		alert(title + "格式不正确!");
+		window.wxc.xcConfirm(title + "格式不正确!", "info", null);
+//		alert(title + "格式不正确!");
 		return false;
 	} else if (!/(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{6,20}/.test(password)) {
-		alert(title + "中必须包含字母、数字、特称字符，至少6个字符，最多20个字符!");
+		window.wxc.xcConfirm(title + "中必须包含字母、数字、特称字符，至少6个字符，最多20个字符!", "info", null);
+//		alert(title + "中必须包含字母、数字、特称字符，至少6个字符，最多20个字符!");
 		return false;
 	} else if (password.length > 20) {
-		alert(title + "字符长度超长!");
+		window.wxc.xcConfirm(title + "字符长度超长!", "info", null);
+//		alert(title + "字符长度超长!");
 		return false;
 	} else if (repeat_password != null && password != repeat_password) {
-		alert(title + "确认密码不一致!");
+		window.wxc.xcConfirm(title + "确认密码不一致!", "info", null);
+//		alert(title + "确认密码不一致!");
 		return false;
 	} else {
 		return true;
@@ -187,16 +199,20 @@ function validator_password(title, password, repeat_password) {
  */
 function validator_double(title, value, minValue, maxValue) {
 	if (value == "") {
-		alert(title + "不能为空！");
+		window.wxc.xcConfirm(title + "不能为空！", "info", null);
+//		alert(title + "不能为空！");
 		return false;
 	} else if (value < minValue) {
-		alert(title + "不能小于" + minValue + "!");
+		window.wxc.xcConfirm(title + "不能小于" + minValue + "!", "info", null);
+//		alert(title + "不能小于" + minValue + "!");
 		return false;
 	} else if (value > maxValue) {
-		alert(title + "不能大于" + maxValue + "!");
+		window.wxc.xcConfirm(title + "不能大于" + maxValue + "!", "info", null);
+//		alert(title + "不能大于" + maxValue + "!");
 		return false;
 	} else if (!/^\d{0,19}\.\d{0,2}$|^\d{0,19}$/.test(value)) {
-		alert(title + "最多可以保留2位小数!");
+		window.wxc.xcConfirm(title + "最多可以保留2位小数!", "info", null);
+//		alert(title + "最多可以保留2位小数!");
 		return false;
 	} else {
 		return true;
@@ -213,7 +229,8 @@ function validator_double(title, value, minValue, maxValue) {
  */
 function validator_null(title, value) {
 	if (value == "") {
-		alert(title + "不能为空！");
+		window.wxc.xcConfirm(title + "不能为空！", "info", null);
+//		alert(title + "不能为空！");
 		return false;
 	}
 	return true;
@@ -227,7 +244,8 @@ function validator_null(title, value) {
  */
 function validator_number(value) {
 	if (!/^[0-9]*$/.test(value)) {
-		alert(title + "只能为数字字符！");
+		window.wxc.xcConfirm(title + "只能为数字字符！", "info", null);
+//		alert(title + "只能为数字字符！");
 		return false;
 	}
 	return true;
@@ -256,7 +274,8 @@ function blankAndNewline(value) {
  */
 function validator_remarks(value) {
 	if (value.length > 500) {
-		alert("输入字符大于500!");
+		window.wxc.xcConfirm("输入字符大于500!", "info", null);
+//		alert("输入字符大于500!");
 		return false;
 	} else {
 		return true;
@@ -275,10 +294,12 @@ function validator_remarks(value) {
  */
 function validator_varLength(title, value, length) {
 	if (value.length < 1) {
-		alert(title + "不能为空！");
+		window.wxc.xcConfirm(title + "不能为空！", "info", null);
+//		alert(title + "不能为空！");
 		return false;
 	} else if (value.length > length) {
-		alert(title + "长度不能大于" + length + "!");
+		window.wxc.xcConfirm(title + "长度不能大于" + length + "!", "info", null);
+//		alert(title + "长度不能大于" + length + "!");
 		return false;
 	} else if (value.length <= length) {
 		return true;

@@ -121,7 +121,7 @@
             [[UserDataMananger sharedManager]setStrRoleType:strRoleType];
             [[UserDataMananger sharedManager]setStrUserPsd:strRPsd];
             [[UserDataMananger sharedManager]setStrUserAPsd:strPsd];
-            [[UserDataMananger sharedManager]setBRemPsd:bRemPsd];
+            [[UserDataMananger sharedManager]setBRemPsd:YES];
             
             [[YDBlutoothTool sharedBlutoothTool]startPrintServ];
             [[PrintService shareInstance]startMQTTServ];
@@ -155,12 +155,12 @@
         NSString *strRPsd = [dicUserInfo objectForKey:@"rpassword"];
         NSString *strPsd = [dicUserInfo objectForKey:@"password"];
         NSString *strRoleType = [NSString stringWithFormat:@"%d",[[dicUserInfo objectForKey:@"roleType"] intValue]];
-        BOOL bRemPsd = [[dicUserInfo objectForKey:@"rempasswd"] boolValue];
+        //BOOL bRemPsd = [[dicUserInfo objectForKey:@"rempasswd"] boolValue];
         if ([strName isEqualToString:@""] || [strPsd isEqualToString:@""]) {
             [self showAlertViewWithTitle:@"账号密码不能为空"];
             return;
         }
-        [self loginWithUserName:strName andPsd:strPsd andStrRPsd:strRPsd andRoleType:strRoleType andRemPsd:bRemPsd];
+        [self loginWithUserName:strName andPsd:strPsd andStrRPsd:strRPsd andRoleType:strRoleType andRemPsd:YES];
     }
 }
 

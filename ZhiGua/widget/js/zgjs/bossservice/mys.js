@@ -13,13 +13,13 @@ function init_boss_info(data) {
 }
 
 function _init_boss_info() {
-	//if (bossJson.loginType == "web_login") {
-	//	$('#link_printer').remove();
-	//} else if (bossJson.loginType == "wechat_login") {
-	//	$('#exit_login').remove();
-	//	$('#link_printer').remove();
-	//}
-	
+//	if (bossJson.loginType == "web_login") {
+//		$('#link_printer').remove();
+//	} else if (bossJson.loginType == "wechat_login") {
+//		$('#exit_login').remove();
+//		$('#link_printer').remove();
+//	}
+//
 	var accountPhoto = bossJson.accountPhoto;
 	if (accountPhoto == "") {
 		accountPhoto = "imgs/logo.png";
@@ -51,6 +51,7 @@ function set_boss_name() {
 	if (validator_varLength("昵称", m_set_boss_Name, 16)) {
 		$('#set_boss_Name').html(m_set_boss_Name);
 		update_bossInfo();
+		close_win();
 	}
 }
 
@@ -64,6 +65,7 @@ function set_boss_phone() {
 	if (validator_phone("手机号", m_set_boss_phone)) {
 		$('#set_boss_phone').html(m_set_boss_phone);
 		update_bossInfo();
+		close_win();
 	}
 }
 
@@ -102,5 +104,19 @@ function link_printer() {
 }
 
 function show_position(){
-    window.location.href = "show_position";
+	window.location.href = "show_position";
+}
+
+
+function sendfeedbackInfo() {
+	var boss_feedbackInfo = $('#boss_feedbackInfo').val();
+	if (boss_feedbackInfo != "") {
+		var data = {
+			"userFeedback.feedbackInfo" : boss_feedbackInfo
+		};
+		ajaxSend("WechatBossMy_addFeedback", data, "GET", "JSON", true, null);
+		close_win();
+	} else {
+		window.wxc.xcConfirm("反馈信息不能为空！", "info", null);
+	}
 }

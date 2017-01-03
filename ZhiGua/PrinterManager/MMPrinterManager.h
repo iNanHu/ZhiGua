@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "MPPeripheral.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
 @interface MMPrinterManager : NSObject

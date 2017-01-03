@@ -1,0 +1,27 @@
+<div class="tobar-z mm ban_move">
+    <div class="tonav">
+    </div>
+</div>
+<div id="set_phone_box" class="wrapper">
+    <div class="scroller">
+        <div>
+            <div class="input-full v3e5">
+                <input type="text" id="m_set_employee_phone" value="" placeholder="请输入手机号">
+            </div>
+        </div>
+        <div class="n20x mb10x">
+            <div class="x_win mo-btn w100 mo-l" data-co="main" onclick="set_phone()">确认</div>
+        </div>
+    </div>
+</div>
+<script>
+set_phone_box = new IScroll('#set_phone_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

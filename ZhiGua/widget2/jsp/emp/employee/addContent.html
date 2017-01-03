@@ -1,0 +1,26 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <em class="win3_switch icon icon-block-m fr pr" data-id=".goods_data"></em>
+    </div>
+</div>
+<div id="add_content_box" class="wrapper">
+    <div class="scroller">
+        <div class="n20x">
+            <div class="mo-textarea">
+                <textarea class="w100" id="m_add_workNotes_content" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="n20x mb10x">
+            <div class="x_win mo-btn w100 mo-l" data-co="main" onclick="add_workNotes_content()">确认</div>
+        </div>           
+    </div>
+</div>
+<script>
+add_content_box = new IScroll('#add_content_box', {
+    probeType: 3,
+    mouseWheel: true,
+    click: true,
+    bindToWrapper: true
+});
+</script>
+

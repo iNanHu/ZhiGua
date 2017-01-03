@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MPBluetoothKit.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
 typedef enum

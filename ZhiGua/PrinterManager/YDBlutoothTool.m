@@ -86,8 +86,6 @@ static YDBlutoothTool *blutoothTool;
     _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:queue options:@{CBCentralManagerOptionShowPowerAlertKey:@YES}];
     [_centralManager setDelegate:self];
     
-    _transmit = [[ReliableBurstData alloc] init];
-    _transmit.delegate = self;
     [self initPrintQueue];
 }
 
@@ -103,7 +101,7 @@ static YDBlutoothTool *blutoothTool;
             _printCount = _printCount%10;
             
             if (_currentPeripheral && _strMacAddr) {
-                if (!_isPrinting && (_printCount == 9 || ![self isPrintOk])) {
+                if (!_isPrinting && (_printCount == 9 || (![self isPrintOk] || _printState & STATE_PRINTING_UNMASK))) {
                     [self getPrinterState];
                     NSLog(@"PrintStatus Reporting...");
                 }
@@ -113,6 +111,23 @@ static YDBlutoothTool *blutoothTool;
     [_queue addOperation:_printOp];
 }
 
+- (void)resetPrinterState {
+    _transmit = nil;
+    _airPatchChar = nil;
+    _currentPeripheral = nil;
+    _strMacAddr = nil;
+    _serialNumDataReadChar = nil;
+    _transparentDataWriteChar = nil;
+    _transparentDataWriteChar = nil;
+    _connectionParameterChar = nil;
+}
+    
+- (void)initPrinterState {
+    
+    _transmit = [[ReliableBurstData alloc] init];
+    _transmit.delegate = self;
+}
+    
 - (void)stopPrintServ {
     
     _isRuning = NO;
@@ -177,6 +192,8 @@ static YDBlutoothTool *blutoothTool;
     [self connectSuccee];
     if (_strMacAddr) {
         [[MMPrinterManager shareInstance]printStatusOnlineWithBtName:btName andBtMac:_strMacAddr];
+        //获取打印机状态
+        [self getPrinterState];
     }
     RunOnMainThread([[NSNotificationCenter defaultCenter]postNotificationName:@"connectSucc" object:btName];)
 }
@@ -261,8 +278,7 @@ static YDBlutoothTool *blutoothTool;
     NSLog(@"disconnectd %@",peripheral.name);
     if (peripheral.name) {
         [self printOffline];
-        _currentPeripheral = nil;
-        _strMacAddr = nil;
+        [self resetPrinterState];
         [self connectBreak];
         RunOnMainThread([[NSNotificationCenter defaultCenter]postNotificationName:@"connectFail" object:peripheral.name];)
     }
@@ -524,6 +540,7 @@ static YDBlutoothTool *blutoothTool;
 - (void)connectPeripheral:(CBPeripheral *)peripheral
 {
     [_centralManager connectPeripheral:peripheral options:nil];
+    [self initPrinterState];
 }
 
 
@@ -721,7 +738,6 @@ static YDBlutoothTool *blutoothTool;
 - (void)configureTransparentServiceUUID: (NSString *)serviceUUID txUUID:(NSString *)txUUID rxUUID:(NSString *)rxUUID
 {
     NSLog(@"8");
-    
 }
 
 - (void)configureDeviceInformationServiceUUID:(NSString *)UUID1 UUID2:(NSString *)UUID2
@@ -793,7 +809,7 @@ static YDBlutoothTool *blutoothTool;
 
 
 - (void)printStatus {
-    
+    NSLog(@"printStatus: %@ state: %d",_currentPeripheral.name,_printState);
     [[MMPrinterManager shareInstance]printStatusWithBtName:_currentPeripheral.name andBtMac:_strMacAddr andPrintState:_printState];
 }
 
@@ -882,7 +898,7 @@ static YDBlutoothTool *blutoothTool;
 
 - (void)getPrinterState {
     
-    //NSLog(@"getPrinterState start....");
+    NSLog(@"getPrinterState start....");
     self.printer.sendFinish = false;
     self.printer.sendFlag = TRUE;
     //缓冲区复位
@@ -913,7 +929,7 @@ static YDBlutoothTool *blutoothTool;
     NSData *data = [self.printer.printerInfo.wrap getData:sendLength];
     [_currentPeripheral writeValue:data forCharacteristic:_transparentDataWriteChar type:CBCharacteristicWriteWithResponse];
     
-    //NSLog(@"getPrinterState End...");
+    NSLog(@"getPrinterState End...");
 }
 
 + (NSDictionary *)dicWithString:(NSString *)jsonString

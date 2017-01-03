@@ -13,8 +13,8 @@
 #define UMAppKey @"585348d63eae255b6a00142d"
 #define GDAPIKey @"89dd5c2ccdd3a80c143c2887f6e6f37b"
 
-//#define SERVADDR @"http://www.zhiguait.com" //Relaease
-#define SERVADDR @"http://www.zhinengshagua.com" //Debug
+#define SERVADDR @"http://www.zhiguait.com" //Relaease
+//#define SERVADDR @"http://www.zhinengshagua.com" //Debug
 
 #define PRINTERURL @"widget/link_printer"
 #define USERLOCURL @"widget/show_position"

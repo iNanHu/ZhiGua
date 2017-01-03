@@ -1,0 +1,102 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+        <p class="page_title ls">编辑商品</p>
+    </div>
+</div>
+<div id="edit_commodity_box" class="wrapper b0">
+    <div class="scroller">
+        <ul class="clients-full-li arrow setting">
+            <li class="o_win" data-load="_update_commodity_photo">
+                <div class="w100 ew">
+                    <span class="w7e">商品图片<span class="sm co-warn">(选填)</span></span>
+                    <span class="ar">
+                        <i class="add-goods-img" id="update_commodity_photo_img" style="background-image: url(imgs/goods2.jpg);"></i>
+                         <input type="hidden" id="update_commodity_photo">
+                    </span>
+                </div>
+            </li>
+        </ul>
+        <ul class="clients-full-li setting">
+            <li>
+                <div class="w100 ew">
+                    <span class="w7e">条形码</span>
+                    <em class="nl1e ar co-back" id="update_bar_code"></em>
+                </div>
+            </li>
+            <li>
+                <div class="w100 ew">
+                    <span class="w7e">商品名称</span>
+                    <em class="nl1e ar co-back" id="update_commodity_name"></em>
+                </div>
+            </li>
+            <li>
+                <div class="w100 ew">
+                    <span class="w7e">供应商</span>
+                    <em class="nl1e ar co-back" id="update_supplier_name"></em>
+                </div>
+            </li>
+            <li>
+                <div class="w100 ew">
+                    <span class="w7e">商品分类</span>
+                    <em class="nl1e ar co-back" id="update_commodity_category_name"></em>
+                </div>
+            </li>
+            <li>
+                <div class="w100 ew">
+                    <span class="w7e">单位</span>
+                    <em class="nl1e ar co-back" id="update_unit_name"></em>
+                </div>
+            </li>
+        </ul>
+        <ul class="clients-full-li arrow setting">
+            <li class="o_win" data-load="_update_commodity_price">
+                <div class="w100 ew">
+                    <span class="w7e">售价</span>
+                    <em class="nl1e ar co-back"><span class="goods-price co-error ml" id="update_commodity_price"></span></em>
+                </div>
+            </li>
+            <li class="o_win" data-load="_update_reference_price">
+                <div class="w100 ew">
+                    <span class="w7e">进货价</span>
+                    <em class="nl1e ar co-back"><span class="goods-price co-error ml" id="update_reference_price"></span></em>
+                </div>
+            </li>        
+        </ul>
+        <ul class="clients-full-li">
+            <li>
+                <div class="w100 ew">
+                    <span class="w7e">状态</span>
+                    <div class="ar nr15x">
+                        <label class="mo-switch" data-co="success">
+                            <input id="update_commodit_status" type="checkbox">
+                            <em></em>
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="clients-full-li setting">
+            <li class="o_win" data-load="_update_commodity_remarks">
+                <div class="w100 ew">
+                    <span class="w7e">备注<span class="sm co-warn">(选填)</span></span>
+                    <em class="icon icon-bi-m ar co-back ll nr15x"></em>
+                </div>
+            </li>
+            <li class="co-back" id="update_commodity_remarks"></li>
+        </ul>
+        <div class="n20x mb10x">
+            <div class="x_win mo-btn w100 mo-l" data-co="main" onclick="update_commodity()">保存</div>
+        </div>
+    </div>
+</div>
+<script>
+edit_commodity_box = new IScroll('#edit_commodity_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>

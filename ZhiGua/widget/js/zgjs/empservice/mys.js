@@ -27,12 +27,12 @@ function init_employee_total_sales(data) {
 }
 
 function _init_employee_info() {
-	if (employeeJson.loginType == "web_login") {
-		//$('#link_printer').remove();
-	} else if (employeeJson.loginType == "wechat_login") {
-		$('#exit_login').remove();
-		//$('#link_printer').remove();
-	}
+//	if (employeeJson.loginType == "web_login") {
+     //		$('#link_printer').remove();
+     //	} else if (employeeJson.loginType == "wechat_login") {
+     //		$('#exit_login').remove();
+     //		$('#link_printer').remove();
+     //	}
 
 	var employeePhoto = employeeJson.employeePhoto;
 	if (employeePhoto == "") {
@@ -65,6 +65,7 @@ function set_name() {
 	if (validator_varLength("昵称", m_set_employee_Name, 16)) {
 		$('#set_employee_Name').html(m_set_employee_Name);
 		update_employee();
+		close_win();
 	}
 }
 
@@ -78,6 +79,7 @@ function set_phone() {
 	if (validator_phone("手机号", m_set_employee_phone)) {
 		$('#set_employee_phone').html(m_set_employee_phone);
 		update_employee();
+		close_win();
 	}
 }
 
@@ -275,6 +277,7 @@ function add_workNotes_title() {
 	var value = $('#m_add_workNotes_title').val();
 	if (validator_varLength("标题", value, 16)) {
 		$('#add_workNotes_title').html(value);
+		close_win();
 	}
 	$('#m_add_workNotes_title').blur();
 }
@@ -283,6 +286,7 @@ function add_workNotes_content() {
 	var value = $('#m_add_workNotes_content').val();
 	if (validator_remarks(value)) {
 		$('#add_workNotes_content').html(value);
+		close_win();
 	}
 	$('#m_add_workNotes_content').blur();
 }
@@ -296,8 +300,10 @@ function add_workNotes() {
 			"workNotes.content" : content
 		};
 		ajaxSend("WechatEmpWorkNotes_addWorkNotes", data, "GET", "JSON", true, "_init_listview_workNotes_manage");
+		close_win();
 	} else {
-		alert("标题或内容不能为空！");
+		window.wxc.xcConfirm("标题或内容不能为空！", "info", null);
+		// alert("标题或内容不能为空！");
 	}
 }
 // 工作笔记end
@@ -307,5 +313,18 @@ function link_printer() {
 }
 
 function show_position(){
-    window.location.href = "show_position";
+	window.location.href = "show_position";
+}
+
+function sendfeedbackInfo() {
+	var emp_feedbackInfo = $('#emp_feedbackInfo').val();
+	if (emp_feedbackInfo != "") {
+		var data = {
+			"userFeedback.feedbackInfo" : emp_feedbackInfo
+		};
+		ajaxSend("WechatEmpMy_addFeedback", data, "GET", "JSON", true, null);
+		close_win();
+	} else {
+		window.wxc.xcConfirm("反馈信息不能为空！", "info", null);
+	}
 }

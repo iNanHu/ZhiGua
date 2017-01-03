@@ -46,12 +46,6 @@
 		082216A11E0145B900CCF767 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 082214461E0145B800CCF767 /* main.m */; };
 		082216A21E0145B900CCF767 /* BackgroundTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 082214491E0145B800CCF767 /* BackgroundTask.m */; };
 		082216A31E0145B900CCF767 /* MMPrinterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822144B1E0145B800CCF767 /* MMPrinterManager.m */; };
-		082216A41E0145B900CCF767 /* MPBluetoothUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 082214501E0145B800CCF767 /* MPBluetoothUtils.m */; };
-		082216A51E0145B900CCF767 /* MPCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 082214521E0145B800CCF767 /* MPCentralManager.m */; };
-		082216A61E0145B900CCF767 /* MPCharacteristic.m in Sources */ = {isa = PBXBuildFile; fileRef = 082214541E0145B800CCF767 /* MPCharacteristic.m */; };
-		082216A71E0145B900CCF767 /* MPDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 082214561E0145B800CCF767 /* MPDescriptor.m */; };
-		082216A81E0145B900CCF767 /* MPPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 082214581E0145B800CCF767 /* MPPeripheral.m */; };
-		082216A91E0145B900CCF767 /* MPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822145A1E0145B800CCF767 /* MPService.m */; };
 		082216AA1E0145B900CCF767 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822145C1E0145B800CCF767 /* NetManager.m */; };
 		082216AB1E0145B900CCF767 /* PrintService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822145E1E0145B800CCF767 /* PrintService.m */; };
 		082216AC1E0145B900CCF767 /* UserDataMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 082214601E0145B800CCF767 /* UserDataMananger.m */; };
@@ -85,7 +79,6 @@
 		082218371E0145BB00CCF767 /* YDBluetoothCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0822167C1E0145B900CCF767 /* YDBluetoothCell.xib */; };
 		082218381E0145BB00CCF767 /* YDBluetoothConnectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822167E1E0145B900CCF767 /* YDBluetoothConnectModel.m */; };
 		082218391E0145BB00CCF767 /* ZGManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 082216801E0145B900CCF767 /* ZGManagerVC.m */; };
-		0822183B1E01774E00CCF767 /* widget in Resources */ = {isa = PBXBuildFile; fileRef = 0822183A1E01774E00CCF767 /* widget */; };
 		0822183D1E017F5F00CCF767 /* ZhiGua.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0822183C1E017F5F00CCF767 /* ZhiGua.xcdatamodeld */; };
 		082218B41E0184B300CCF767 /* AccountInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 082218411E0184B200CCF767 /* AccountInfoCell.xib */; };
 		082218B51E0184B300CCF767 /* UIButton+ImageWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 082218441E0184B200CCF767 /* UIButton+ImageWithLabel.m */; };
@@ -136,10 +129,12 @@
 		082218E21E0184B300CCF767 /* TWSelectCityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 082218AF1E0184B300CCF767 /* TWSelectCityView.m */; };
 		082218E31E0184B300CCF767 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 082218B11E0184B300CCF767 /* README.md */; };
 		082218E41E0184B300CCF767 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 082218B31E0184B300CCF767 /* XMLReader.m */; };
+		0832EE491E124E1B000A001C /* WGS84TOGCJ02.m in Sources */ = {isa = PBXBuildFile; fileRef = 0832EE481E124E1B000A001C /* WGS84TOGCJ02.m */; };
 		086C056D1DD5615F00501449 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086C056C1DD5615F00501449 /* WebKit.framework */; };
 		086C056F1DD5617000501449 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 086C056E1DD5617000501449 /* libstdc++.tbd */; };
 		086C05711DD5617B00501449 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 086C05701DD5617B00501449 /* libicucore.tbd */; };
 		086C05731DD5618400501449 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 086C05721DD5618400501449 /* libz.tbd */; };
+		08A106AB1E1A8F09005067F8 /* widget in Resources */ = {isa = PBXBuildFile; fileRef = 08A106AA1E1A8F09005067F8 /* widget */; };
 		08CB54CF1E0FB8E5002F9DCE /* AnimatedAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB54CE1E0FB8E5002F9DCE /* AnimatedAnnotation.m */; };
 		7BB0195E1D902CD50020776F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB0195D1D902CD50020776F /* CoreImage.framework */; };
 		7BB019621D902D380020776F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB019611D902D380020776F /* QuartzCore.framework */; };
@@ -217,20 +212,6 @@
 		082214491E0145B800CCF767 /* BackgroundTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundTask.m; sourceTree = "<group>"; };
 		0822144A1E0145B800CCF767 /* MMPrinterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPrinterManager.h; sourceTree = "<group>"; };
 		0822144B1E0145B800CCF767 /* MMPrinterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPrinterManager.m; sourceTree = "<group>"; };
-		0822144D1E0145B800CCF767 /* MPBluetoothKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBluetoothKit.h; sourceTree = "<group>"; };
-		0822144E1E0145B800CCF767 /* MPBluetoothKitBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBluetoothKitBlocks.h; sourceTree = "<group>"; };
-		0822144F1E0145B800CCF767 /* MPBluetoothUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBluetoothUtils.h; sourceTree = "<group>"; };
-		082214501E0145B800CCF767 /* MPBluetoothUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBluetoothUtils.m; sourceTree = "<group>"; };
-		082214511E0145B800CCF767 /* MPCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCentralManager.h; sourceTree = "<group>"; };
-		082214521E0145B800CCF767 /* MPCentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCentralManager.m; sourceTree = "<group>"; };
-		082214531E0145B800CCF767 /* MPCharacteristic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCharacteristic.h; sourceTree = "<group>"; };
-		082214541E0145B800CCF767 /* MPCharacteristic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCharacteristic.m; sourceTree = "<group>"; };
-		082214551E0145B800CCF767 /* MPDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPDescriptor.h; sourceTree = "<group>"; };
-		082214561E0145B800CCF767 /* MPDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPDescriptor.m; sourceTree = "<group>"; };
-		082214571E0145B800CCF767 /* MPPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPeripheral.h; sourceTree = "<group>"; };
-		082214581E0145B800CCF767 /* MPPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPeripheral.m; sourceTree = "<group>"; };
-		082214591E0145B800CCF767 /* MPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPService.h; sourceTree = "<group>"; };
-		0822145A1E0145B800CCF767 /* MPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPService.m; sourceTree = "<group>"; };
 		0822145B1E0145B800CCF767 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
 		0822145C1E0145B800CCF767 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		0822145D1E0145B800CCF767 /* PrintService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintService.h; sourceTree = "<group>"; };
@@ -298,7 +279,6 @@
 		0822167E1E0145B900CCF767 /* YDBluetoothConnectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBluetoothConnectModel.m; sourceTree = "<group>"; };
 		0822167F1E0145B900CCF767 /* ZGManagerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGManagerVC.h; sourceTree = "<group>"; };
 		082216801E0145B900CCF767 /* ZGManagerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGManagerVC.m; sourceTree = "<group>"; };
-		0822183A1E01774E00CCF767 /* widget */ = {isa = PBXFileReference; lastKnownFileType = folder; name = widget; path = ZhiGua/widget; sourceTree = SOURCE_ROOT; };
 		082218411E0184B200CCF767 /* AccountInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountInfoCell.xib; sourceTree = "<group>"; };
 		082218431E0184B200CCF767 /* UIButton+ImageWithLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageWithLabel.h"; sourceTree = "<group>"; };
 		082218441E0184B200CCF767 /* UIButton+ImageWithLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageWithLabel.m"; sourceTree = "<group>"; };
@@ -396,10 +376,13 @@
 		082218B11E0184B300CCF767 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		082218B21E0184B300CCF767 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
 		082218B31E0184B300CCF767 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		0832EE471E124E1B000A001C /* WGS84TOGCJ02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGS84TOGCJ02.h; sourceTree = "<group>"; };
+		0832EE481E124E1B000A001C /* WGS84TOGCJ02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGS84TOGCJ02.m; sourceTree = "<group>"; };
 		086C056C1DD5615F00501449 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		086C056E1DD5617000501449 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		086C05701DD5617B00501449 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		086C05721DD5618400501449 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		08A106AA1E1A8F09005067F8 /* widget */ = {isa = PBXFileReference; lastKnownFileType = folder; name = widget; path = ZhiGua/widget; sourceTree = SOURCE_ROOT; };
 		08CB54CD1E0FB8E5002F9DCE /* AnimatedAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedAnnotation.h; sourceTree = "<group>"; };
 		08CB54CE1E0FB8E5002F9DCE /* AnimatedAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedAnnotation.m; sourceTree = "<group>"; };
 		75CBD60B068FD2047FBC4C4E /* Pods-ZhiGua.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhiGua.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhiGua/Pods-ZhiGua.release.xcconfig"; sourceTree = "<group>"; };
@@ -478,6 +461,8 @@
 				0822141A1E0145B700CCF767 /* UIViewController+Style.m */,
 				0822141B1E0145B700CCF767 /* UUID.h */,
 				0822141C1E0145B700CCF767 /* WJSCommonDefine.h */,
+				0832EE471E124E1B000A001C /* WGS84TOGCJ02.h */,
+				0832EE481E124E1B000A001C /* WGS84TOGCJ02.m */,
 			);
 			name = Common;
 			path = ZhiGua/Common;
@@ -598,33 +583,11 @@
 				082214621E0145B800CCF767 /* YDBlutoothTool.m */,
 				08CB54CD1E0FB8E5002F9DCE /* AnimatedAnnotation.h */,
 				08CB54CE1E0FB8E5002F9DCE /* AnimatedAnnotation.m */,
-				0822144C1E0145B800CCF767 /* MPBluetoothKit */,
 				082214631E0145B800CCF767 /* ZGPrinter */,
 			);
 			name = PrinterManager;
 			path = ZhiGua/PrinterManager;
 			sourceTree = SOURCE_ROOT;
-		};
-		0822144C1E0145B800CCF767 /* MPBluetoothKit */ = {
-			isa = PBXGroup;
-			children = (
-				0822144D1E0145B800CCF767 /* MPBluetoothKit.h */,
-				0822144E1E0145B800CCF767 /* MPBluetoothKitBlocks.h */,
-				0822144F1E0145B800CCF767 /* MPBluetoothUtils.h */,
-				082214501E0145B800CCF767 /* MPBluetoothUtils.m */,
-				082214511E0145B800CCF767 /* MPCentralManager.h */,
-				082214521E0145B800CCF767 /* MPCentralManager.m */,
-				082214531E0145B800CCF767 /* MPCharacteristic.h */,
-				082214541E0145B800CCF767 /* MPCharacteristic.m */,
-				082214551E0145B800CCF767 /* MPDescriptor.h */,
-				082214561E0145B800CCF767 /* MPDescriptor.m */,
-				082214571E0145B800CCF767 /* MPPeripheral.h */,
-				082214581E0145B800CCF767 /* MPPeripheral.m */,
-				082214591E0145B800CCF767 /* MPService.h */,
-				0822145A1E0145B800CCF767 /* MPService.m */,
-			);
-			path = MPBluetoothKit;
-			sourceTree = "<group>";
 		};
 		082214631E0145B800CCF767 /* ZGPrinter */ = {
 			isa = PBXGroup;
@@ -1022,7 +985,7 @@
 		7BF5EB6F1D7D56C80088B4D5 /* ZhiGua */ = {
 			isa = PBXGroup;
 			children = (
-				0822183A1E01774E00CCF767 /* widget */,
+				08A106AA1E1A8F09005067F8 /* widget */,
 				082214071E0145B700CCF767 /* Common */,
 				0822141D1E0145B700CCF767 /* images */,
 				082214271E0145B700CCF767 /* lib */,
@@ -1084,7 +1047,7 @@
 				TargetAttributes = {
 					7BF5EB6C1D7D56C80088B4D5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = PD973WK396;
+						DevelopmentTeam = GJN3NLC573;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1117,7 +1080,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0822183B1E01774E00CCF767 /* widget in Resources */,
+				08A106AB1E1A8F09005067F8 /* widget in Resources */,
 				082216921E0145B900CCF767 /* nav_back.png in Resources */,
 				082218371E0145BB00CCF767 /* YDBluetoothCell.xib in Resources */,
 				082216901E0145B900CCF767 /* nav_add@2x.png in Resources */,
@@ -1204,7 +1167,6 @@
 				082216BD1E0145B900CCF767 /* JPLImage.m in Sources */,
 				082216AA1E0145B900CCF767 /* NetManager.m in Sources */,
 				082216B31E0145B900CCF767 /* Code128.m in Sources */,
-				082216A51E0145B900CCF767 /* MPCentralManager.m in Sources */,
 				082218E21E0184B300CCF767 /* TWSelectCityView.m in Sources */,
 				082216B11E0145B900CCF767 /* ImageConvert.m in Sources */,
 				082218D61E0184B300CCF767 /* MJRefreshConst.m in Sources */,
@@ -1219,8 +1181,6 @@
 				082216B61E0145B900CCF767 /* Graphic.m in Sources */,
 				082216B41E0145B900CCF767 /* ESC.m in Sources */,
 				082218D21E0184B300CCF767 /* MJRefreshGifHeader.m in Sources */,
-				082216A81E0145B900CCF767 /* MPPeripheral.m in Sources */,
-				082216A71E0145B900CCF767 /* MPDescriptor.m in Sources */,
 				082216BE1E0145B900CCF767 /* JPLText.m in Sources */,
 				082216AD1E0145B900CCF767 /* YDBlutoothTool.m in Sources */,
 				082218361E0145BB00CCF767 /* YDBluetoothCell.m in Sources */,
@@ -1232,13 +1192,12 @@
 				082216C41E0145BA00CCF767 /* ZJLocationService.m in Sources */,
 				082218C01E0184B300CCF767 /* NSArray+MASAdditions.m in Sources */,
 				082216AB1E0145B900CCF767 /* PrintService.m in Sources */,
+				0832EE491E124E1B000A001C /* WGS84TOGCJ02.m in Sources */,
 				082218351E0145BB00CCF767 /* PrintMainVC.m in Sources */,
 				082218B71E0184B300CCF767 /* ILAlertView.m in Sources */,
 				082218BE1E0184B300CCF767 /* MASViewAttribute.m in Sources */,
-				082216A91E0145B900CCF767 /* MPService.m in Sources */,
 				082218CF1E0184B300CCF767 /* MJRefreshBackGifFooter.m in Sources */,
 				082218D91E0184B300CCF767 /* UIScrollView+MJRefresh.m in Sources */,
-				082216A61E0145B900CCF767 /* MPCharacteristic.m in Sources */,
 				082216AE1E0145B900CCF767 /* ISError.m in Sources */,
 				082218B51E0184B300CCF767 /* UIButton+ImageWithLabel.m in Sources */,
 				082218DF1E0184B300CCF767 /* BarItem.m in Sources */,
@@ -1252,7 +1211,6 @@
 				082218CB1E0184B300CCF767 /* MJRefreshHeader.m in Sources */,
 				082218D81E0184B300CCF767 /* UIScrollView+MJExtension.m in Sources */,
 				082216B91E0145B900CCF767 /* JPL.m in Sources */,
-				082216A41E0145B900CCF767 /* MPBluetoothUtils.m in Sources */,
 				082218C31E0184B300CCF767 /* ViewController+MASAdditions.m in Sources */,
 				082216A31E0145B900CCF767 /* MMPrinterManager.m in Sources */,
 				082218C61E0184B300CCF767 /* MBProgressHUD.m in Sources */,
@@ -1411,7 +1369,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = PD973WK396;
+				DEVELOPMENT_TEAM = GJN3NLC573;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1456,7 +1414,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = PD973WK396;
+				DEVELOPMENT_TEAM = GJN3NLC573;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

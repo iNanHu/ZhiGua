@@ -1,0 +1,31 @@
+<div class="tobar-z ml ban_move">
+    <div class="tonav">
+     	<em class="o_win mo-tonav icon icon-screen fr pr" data-load="_statistical_filter"></em>
+    </div>
+</div>
+<div id="commoditySales_box" class="wrapper b0">
+    <div class="scroller">
+        <div class="mo-search mh15x">
+            <input class="o_key sm" id="input_search_commoditySales" type="text" placeholder="输入商品首字母搜索？" data-key-type="abc" readonly>
+            <span class="icon icon-search"></span>
+        </div>
+        <ul id="listview_commoditySales_list" class="both goods-list bg-white nw20x-z nh1e-z">
+        </ul>
+        <div class="pullUp sm ac v2e nr0e5 mb0e5 co-back no_more" style="display: none">
+            <!--<i class="icon mm icon-loading dis-inbok"></i><span class="sm nl5x dis-inbok v2e5">上拉加载更多</span>-->
+            <!--<p class="load_more"><i class="icon icon-loading mm"></i><span>加载更多</span></p>-->
+            <!--<p class="no_more"><i class="icon icon-loading mm"></i><span>没有更多</span></p>-->
+        </div>
+    </div>
+</div>
+<script>
+commoditySales_box = new IScroll('#commoditySales_box', {
+        probeType: 3,
+        mouseWheel: true,
+        click: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true,
+        bindToWrapper: true
+    });
+</script>
